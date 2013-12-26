@@ -1,0 +1,17 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
+
+        <!-- API 14 theme customizations can go here. -->
+        <!-- 背景缓存色透明，避免拖动全黑 -->
+        <item name="android:colorBackgroundCacheHint">#00000000</item>
+        <!-- 错误字体颜色 -->
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+    </style>
+
+</resources>

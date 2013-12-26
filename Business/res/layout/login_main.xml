@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/error" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/varbg"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user"
+            android:textSize="16sp" />
+
+        <AutoCompleteTextView
+            android:id="@+id/lm_edtext1"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:hint="@string/user_hint"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:textColor="@color/lan"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pswd"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/lm_edtext2"
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:hint="@string/pswd_hint"
+            android:imeOptions="actionGo"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/lan"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lm_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="@string/login"
+        android:textSize="16sp" />
+
+</LinearLayout>

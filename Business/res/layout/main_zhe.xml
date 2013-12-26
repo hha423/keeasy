@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/varbg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:text="@string/curzhe" />
+
+    <TextView
+        android:id="@+id/mz_zhe"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/clickd_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp" />
+
+    <LinearLayout
+        android:id="@+id/mz_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:text="@string/editzhe" />
+
+        <Spinner
+            android:id="@+id/mz_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/click_bg"
+            android:spinnerMode="dropdown"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/mz_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:padding="7dp"
+            android:text="@string/mzok"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/varbg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:text="@string/curzhetime" />
+
+    <TextView
+        android:id="@+id/mz_startime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp" />
+
+    <LinearLayout
+        android:id="@+id/stlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:text="@string/mzdian" />
+
+        <Spinner
+            android:id="@+id/mz_stedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/click_bg"
+            android:spinnerMode="dropdown"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mz_stoptime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/clickd_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp" />
+
+    <LinearLayout
+        android:id="@+id/ptlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:text="@string/mzdian" />
+
+        <Spinner
+            android:id="@+id/mz_ptedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/click_bg"
+            android:spinnerMode="dropdown"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="10dp"
+        android:text="@string/zhehint"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/mz_btnok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp"
+        android:text="@string/mc_btn" />
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">周边生活后台</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="user">帐号</string>
+    <string name="pswd">密码</string>
+    <string name="user_hint">请输入您的帐号</string>
+    <string name="pswd_hint">请输入您的密码</string>
+    <string name="remb">记住登录密码</string>
+    <string name="login">登录</string>
+    
+    <string name="left_kh">(</string>
+    <string name="right_kh">)</string>
+    
+    <string name="ic_top">IC 通讯</string>
+    
+    <string name="lbs_top">精确定位</string>
+    <string name="update">更新店铺地址</string>
+    <string name="lation">定位说明：\n    1.可手动点击地图任意一点确定具体位置提交更新。\n    2.点击右上角的定位按钮可自动定位到当前位置。\n    3.定位成功后点击下面提交位置按钮完成定位。\n    4.打开GPS卫星连接到卫星后(任务栏定位图标不动了代表连接成功)再点击右上角的定位然后点提交位置按钮可定位GPS精确位置(限室外使用)。</string>
+    
+    <string name="verify_top">消费验证</string>
+    <string name="verify">输入验证码:</string>
+    <string name="verify_hint">如:123456</string>
+    <string name="code">验  证</string>
+    
+    <string name="chatcont">请输入聊天内容</string>
+    <string name="send">发送</string>
+    <string name="say">请按住说话松开后发送</string>
+    
+    <string name="old_add">旧地址：</string>
+    <string name="new_add">新地址：</string>
+    <string name="add_hint">请输入店铺地址</string>
+    
+    <string name="drop">.................................................................................................</string>
+    
+    <string name="product">订单产品</string>
+    <string name="productinfo">订单信息</string>
+    
+    <string name="mc_pwd">新密码:</string>
+    <string name="mc_pwd_hint">请输入新密码</string>
+    <string name="mc_btn">提交</string>
+    
+    <string name="suba">子帐号管理</string>
+    <string name="mverify">消费验证</string>
+    <string name="order">订单管理</string>
+    <string name="ic">IC 通讯</string>
+    <string name="lbs">店铺定位</string>
+    <string name="zhe">限时折扣</string>
+    <string name="exit">退出登录</string>
+    
+    <string name="curzhe">限时折扣调整</string>
+    <string name="curzhetime">限时折扣时段调整</string>
+    <string name="editzhe">请选择折扣：</string>
+    <string name="mzdian">请选择一个时间：</string>
+    <string name="mzok">确定</string>
+    <string name="zhehint">注：设置限时折扣活动仅限当天生效，客户在下单后到店消费验证时间推迟在活动结束后三十分钟内有效。活动一旦开始需等到活动结束以后才可以进行再次修改。</string>
+    
+    <string name="hello">请将条码置于取景框内扫描</string>
+    
+    <string name="keeasy">www.keeasy.com</string>
+
+</resources>

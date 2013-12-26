@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:text="@string/old_add" />
+
+    <TextView
+        android:id="@+id/mm_oadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@null"
+        android:padding="5dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:text="@string/new_add" />
+
+    <EditText
+        android:id="@+id/mm_nadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@null"
+        android:hint="@string/add_hint"
+        android:imeOptions="actionDone"
+        android:padding="5dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mm_btnok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/mc_btn"
+        android:textSize="16sp" />
+
+</LinearLayout>
