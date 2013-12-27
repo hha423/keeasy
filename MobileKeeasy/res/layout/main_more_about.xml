@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/move" />
+
+            <FrameLayout
+                android:id="@+id/main_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300dp"
+                    android:scrollbars="none" />
+
+                <ImageView
+                    android:id="@+id/about_youku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/youku" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/jianshao" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/jscontent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/coinfo" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/compt"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fullscreen_custom_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

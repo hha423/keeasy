@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <cn.evan.tools.ui.ImageViews
+                android:id="@+id/dianpu_img"
+                android:layout_width="fill_parent"
+                android:layout_height="110.0dip"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/zhes" />
+
+                <TextView
+                    android:id="@+id/dianpu_zheke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dianpu_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/clickd_bg" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/gou" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_weight="1.0"
+                    android:text="@string/diancai"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/itembg"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/dian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="@string/jieshao"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dianpu_jianshao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53.0dip"
+                android:padding="10.0dip"
+                android:textColor="@color/dimgray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/zhi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="@string/xuzhi"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dianpu_xiuzhi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53.0dip"
+                android:padding="10.0dip"
+                android:textColor="@color/dimgray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/addr" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="@string/addr"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dianpu_addr"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53.0dip"
+                android:padding="10.0dip"
+                android:textColor="@color/dimgray" />
+
+            <LinearLayout
+                android:id="@+id/dianpu_btnic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/click_bg" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/ic" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_weight="1.0"
+                    android:text="@string/lianxi"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/itembg"
+                android:gravity="center_vertical"
+                android:paddingLeft="14dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/time" />
+
+                <TextView
+                    android:id="@+id/dianpu_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8.0dip"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <cn.evan.tools.ui.ImageViews
+                android:id="@+id/shoptc_img"
+                android:layout_width="fill_parent"
+                android:layout_height="110.0dip"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:padding="3.0dip"
+                    android:src="@drawable/zhes" />
+
+                <TextView
+                    android:id="@+id/shoptc_zheke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5.0dip"
+                    android:textSize="18.0sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="53dp"
+                android:text="@string/tccontent"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/shoptc_jianshao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45.0dip"
+                android:padding="10.0dip"
+                android:textColor="@color/dimgray" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="53dp"
+                android:text="@string/xuzhi"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@+id/shoptc_xiuzhi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45.0dip"
+                android:padding="10.0dip"
+                android:textColor="@color/dimgray" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="53dp"
+                android:text="@string/tcprice"
+                android:textSize="18.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="28dp"
+                android:background="@drawable/itembg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="55dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/shoptc_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/tomato" />
+
+                <TextView
+                    android:id="@+id/shoptc_sun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/tomato" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="28dp"
+                android:background="@drawable/itembg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="55dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/shoptc_ding"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/tomato" />
+
+                <TextView
+                    android:id="@+id/shoptc_fu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/tomato" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shoptc_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/click_bg"
+                android:paddingLeft="45dp"
+                android:text="@string/tcinfo"
+                android:textSize="18.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/varbg"
+                android:gravity="center_vertical"
+                android:paddingLeft="53dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/names"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/shoptc_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/name_hint"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/itembg"
+                android:gravity="center_vertical"
+                android:paddingLeft="50dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tel"
+                    android:textSize="16.0sp" />
+
+                <EditText
+                    android:id="@+id/shoptc_tel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/tel_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberSigned"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:padding="3dp"
+                android:text="@string/sming"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/shoptc_go"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/click_bg"
+                android:paddingLeft="45dp"
+                android:text="@string/go"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

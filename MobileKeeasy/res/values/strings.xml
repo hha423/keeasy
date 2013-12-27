@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">周边生活</string>
+    <string name="action_settings">设置</string>
+    
+    <string name="left_kh">(</string>
+    <string name="right_kh">)</string>
+    
+    <string name="jieshao">店铺介绍</string>
+    <string name="xuzhi">购买需知</string>
+    <string name="diancai">进入点菜</string>
+    <string name="addr">店铺地址</string>
+    <string name="lianxi">联系商家</string>
+    <string name="list">商品清单</string>
+    <string name="xiaopiao">电子小票</string>
+    
+    <string name="seahint">请输入店铺关键字或IC号搜索</string>
+    <string name="login">用户登录</string>
+    <string name="btn_reg">立即注册</string>
+    <string name="btn_login">登录</string>
+    <string name="user_login">请输入您的用户名/手机号/邮箱</string>
+    <string name="user_pwd">请输入您的用户密码</string>
+    <string name="user_repwd">请确认您输入的密码</string>
+    <string name="user">帐号</string>
+    <string name="pwd">密码</string>
+    <string name="thrid">使用第三方帐号登录</string>
+    <string name="exit">退出登录</string>
+    
+    <string name="scshuaxin">上次刷新  : </string>
+    <string name="scxiangxia">向下拖动进行刷新</string>
+    <string name="scmore">查看更多</string>
+    <string name="load">正在加载&#8230;</string>
+    
+    <string name="zhongwu">｜限购买后30日内中午使用</string>
+    <string name="gongzuo">｜限购买后30日内周一到周五使用</string>
+    <string name="zhoumou">｜限购买后30日内全时段使用</string>
+    <string name="quyu">切换区域</string>
+    <string name="fenlie">切换分类</string>
+    <string name="shiduan">选择时段</string>
+    <string name="full">全部</string>
+    
+    <string name="move">周边合伙人视频</string>
+    <string name="jianshao">周边介绍</string>
+    <string name="coinfo">公司信息</string>
+    <string name="jscontent">“周边生活”是一家致力于线上和线下业务相结合的O2O平台，解决商家经营渠道的单一，地区局域性的问题，通过分时段的形式来解决商家经营的空白点。通过线上线下相结合的形式辅助商家经营，“周边生活”提供免费线上经营的“周边生活”平台和商家独立后台，将商铺以1：1的比例搬上周边生活平台。让消费者更快的了解，店内的环境、价格、款式、类型、折扣等。做到真正的精准消费，及时找到最合适的产品和服务，还原最真实的体验。让商家在不影响原本经营的情况下，辅助经营。将商家的经营时段合理的分配,让商家从成本控制到经营盈利都有一个提升，提高用户黏稠度。</string>
+    
+    <string name="weixin">关注周边生活微信</string>
+    <string name="weibo">关注周边生活微博</string>
+    <string name="cache">清除本地缓存</string>
+    <string name="tuisong">消息推送设置</string>
+    <string name="update">检查更新</string>
+    <string name="about">关于周边生活</string>
+    <string name="compt">深圳市深可意网络技术有限公司\n经营许可证编号粤B2&#8211;20120712\n粤ICP备12078653号</string>
+    
+    <string name="hist">搜索历史：</string>
+    <string name="clean">清除</string>
+    <string name="search">搜索</string>
+    
+    <string name="chatcont">请输入聊天内容</string>
+    <string name="send">发送</string>
+    <string name="say">请按住说话松开后发送</string>
+    
+    <string name="order">我的订单</string>
+    <string name="friend">我的好友</string>
+    <string name="money">我的余额</string>
+    
+    <string name="tccontent">套餐内容</string>
+    <string name="tcimg">套餐图片</string>
+    <string name="tcinfo">查看详情</string>
+    <string name="go">提交订单</string>
+    <string name="tcprice">套餐价格</string>
+    <string name="sming">付款成功将会发送消费码到您的手机上，请认真填写。</string>
+    
+    <string name="product">订单产品</string>
+    <string name="productinfo">订单信息</string>
+    <string name="payway">支付方式</string>
+    <string name="alipay">支付宝支付</string>
+    <string name="unpay">银联在线支付</string>
+    
+    <string name="goshop">进入店铺</string>
+    <string name="navi">导航去这儿</string>
+    <string name="walk">步行</string>
+    <string name="bus">公交</string>
+    <string name="car">驾驶</string>
+    
+    <string name="old_pwd">旧密码</string>
+    <string name="old_hint">修改昵称可留空,改密码必填</string>
+    <string name="new_pwd">新密码</string>
+    <string name="new_hint">请输入新密码，不修改可留空</string>
+    <string name="new_repwd">请再次输入新密码</string>
+    <string name="new_name">昵称</string>
+    <string name="nname_hint">请输入新昵称，不修改可留空</string>
+    
+    <string name="names">姓名：</string>
+    <string name="name_hint">请输入您的姓名</string>
+    <string name="tel">手机：</string>
+    <string name="tel_hint">请输入您的手机或电话</string>
+    <string name="mail">邮箱：</string>
+    <string name="mail_hint">请输入您的邮箱地址</string>
+    <string name="msg">留言：</string>
+    <string name="msg_hint">请输入您的留言内容</string>
+    <string name="subject">提交</string>
+    
+    <string name="begtime">开始时间：</string>
+    <string name="endtime">结束时间：</string>
+    <string name="zhetime">限时折扣：</string>
+    <string name="zhe">  折</string>
+    
+    <string name="zs01">年轻人，创业最怕“看不见”“看不起”“看不懂”“跟不上”今天要懂得抓住机遇,才会获得成功！你不去创业，不去旅游，不去接受新鲜事物，不去给身边的人带去正能量，整天挂着QQ，看看微信 ，逛逛淘宝，拿着包月的工资，干着不计流量的工作。千篇一律的重复着昨天的生活，干着80岁老人都能做的事，等着天上掉馅饼的美事，你要青春有什么用？有目标的人在奔跑，沒目标的人在流浪； 有目标的人在感恩，沒目标的人在抱怨； 有目标的人睡不着， 沒目标的人睡不醒； 给人生一个梦，给梦一条路，给路一个方向！ 生命只有干出来的精彩，沒有等待出来的輝煌！</string>
+    <string name="zs02">1．投入成本高，风险大，门槛高。\n2．创业没有经验，缺乏经营方法，很多有想法的青年想拥有自己的一份事业，但是他们没有创业的经验，基础。\n3．没有一个成功的商业模式，在经济高速发展的今天，很多创业者四处碰壁，就是因为没有找到一个成功的商业模式。\n4．没有一个专业的团队指导，不管做哪行生意，走哪条路，指路的那个人往往是很关键的，这也是很多的想创业的朋友的难题之一，缺乏一个优良的团队做导师。\n5．没有一个合适自身条件的平台，创业者最怕没有找到合适自身的平台，要么门槛太高，要么发展太小。</string>
+    <string name="zs03">1．零风险，投入低，没有任何的代理费用，你的投入只是业务和维护（你需要选定自己创业的区域，周边生活免费提供市场业务的整套培训,市场开拓的全面协助,市场宣传的品牌推广，这一切不需要任何的加盟费、代理费，你只需要投入自己的热情和执行去开拓属于自己的市场。周边生活的区域保护政策，让你不用担心有人去抢占你的市场，你就是该区域唯一“所有人”）\n2．零门槛,没做过没问题，周边生活提供专业的合伙人培训（你不需要注册公司,你不需要租用办公场地，你不需要广阔的人脉资源，你不需要多强大的资金后盾，模式周边生活给，网站平台周边生活建设，服务器周边生活维护，对于未来周边生活提供专业的市场营销规划，你只要认可自己，认可O2O的未来，认可周边生活未来智慧的城市，你就可以开始属于自己的创业之旅）\n3．七三分成,你的回报=该区域所有收益x70%（周边生活提供合伙区域7成的利润，给创业者更多发展机会。我们共同获得的是市场，合伙人拥有的是事业，只要你想、愿意付出实干和激情，我们就与您携手！）\n4．一个成熟的商业模式（周边生活线上和线下相结合，通过五年来的商业实践，建立了一个成熟的商业模式）\n5．区域保护政策（周边生活在全深圳划分为39个区域，每个区域仅限一名区域合伙人独家代理，以保障该区域内合伙人的利益）</string>
+    <string name="zs04">1. 拨打我们的咨询热线（0755&#8211;36504555 36604411 36604422）咨询“周边合伙人”合作信息。\n2. 到公司进行详细的考察和了解项目，了解行业以及市场的发展前景。\n3. 同公司相关部门洽谈合作事宜，合作规划，合作细节。\n4. 总部将进行为期一周的培训，总项目规划，业务开展以及客户后期跟踪维护。5. \n总部分派一个业务组进行辅助你所合作的区域内市场调查和商家精准数据分析方案，不同商家精准定位，为你的业务开展做好铺垫，以更快的速度打开市场突破口。\n6. 总部分派一个业务组辅助前期市场开拓和担任市场顾问。</string>
+    <string name="zs05">深圳：深圳市南山区沙河西路3011号白沙科技产业园（原白沙物流园）3楼K区\n邮政编码：518000\n电话: 86&#8211;755&#8211;3650&#8211;4555  3660&#8211;4411  3660&#8211;4422 \n传真: 86&#8211;755&#8211;3306&#8211;7839 \nE&#8211;mail: keeasy@126.com</string>
+    
+    <string name="heji">合计：</string>
+    <string name="zheke">折扣：</string>
+    <string name="huodong">折后价：</string>
+    <string name="yuding">预定金：</string>
+    <string name="rmb">￥</string>
+    <string name="gang">/</string>
+    <string name="beizhu">注：只需在线支付5%的预定金，到店支付剩下的余额即可享受超级折扣！</string>
+    
+    <string name="remote_call_failed">调用远程服务失败</string>
+    <string name="buy_top">支付页面</string>
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="queding">确定支付</string>
+    
+    <string name="hello">请将条码置于取景框内扫描</string>
+    
+    <string name="weibosdk_demo_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+    <string name="weibosdk_demo_token_has_existed">Token 仍在有效期内，无需再次登录。</string>
+    <string name="weibosdk_demo_toast_auth_success">授权成功正在登录</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <string name="weibosdk_demo_toast_auth_canceled">取消授权</string>
+    
+</resources>

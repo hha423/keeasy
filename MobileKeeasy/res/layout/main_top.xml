@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@color/huise" >
+
+    <ImageView
+        android:id="@+id/top_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:contentDescription="@string/app_name"
+        android:padding="6.0dip"
+        android:src="@drawable/back"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:textSize="20.0sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/top_cart_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/top_cart"
+            android:layout_centerHorizontal="true"
+            android:paddingRight="12.0dip"
+            android:paddingBottom="3dp"
+            android:textColor="@color/rosybrown"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:id="@id/top_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="3dp"
+            android:paddingRight="12.0dip"
+            android:paddingTop="3dp"
+            android:src="@drawable/xiaopao"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/top_bg" />
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/top_bg" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/top_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="22dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/reg_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/user_login"
+                android:imeOptions="actionNext"
+                android:maxEms="12"
+                android:padding="10sp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/top_bg" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="22dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                android:text="@string/pwd"
+                android:textSize="18.0sp" />
+
+            <EditText
+                android:id="@+id/reg_pwd"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:hint="@string/user_pwd"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxEms="14"
+                android:padding="10sp"
+                android:singleLine="true"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@+id/reg_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:contentDescription="@string/app_name"
+                android:padding="3.0dip"
+                android:src="@drawable/input_delete"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/top_bg" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="22dp" >
+
+            <EditText
+                android:id="@+id/reg_pswd"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:hint="@string/user_repwd"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword"
+                android:maxEms="14"
+                android:padding="10sp"
+                android:singleLine="true"
+                android:textSize="14.0sp" />
+
+            <ImageView
+                android:id="@+id/reg_clean1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:padding="3.0dip"
+                android:src="@drawable/input_delete"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/reg_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8.0dip"
+                android:contentDescription="@string/app_name"
+                android:paddingRight="3.0dip"
+                android:src="@drawable/miwen" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/top_bg" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/click_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="22dp"
+        android:text="@string/btn_reg"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:paddingLeft="8.0dip"
+        android:text="@string/thrid"
+        android:textSize="12.0sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="5.0dip"
+        android:background="@drawable/top_bg"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5.0dip"
+        android:stretchColumns="0,1"
+        android:visibility="gone" >
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/reg_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="8.0dip"
+                android:src="@drawable/btn_qq" />
+
+            <ImageView
+                android:id="@+id/reg_sina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_sina" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@drawable/top_bg" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/varbg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clickd_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="@string/goshop" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clickd_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:text="@string/navi"
+        android:visibility="gone" />
+
+</LinearLayout>
