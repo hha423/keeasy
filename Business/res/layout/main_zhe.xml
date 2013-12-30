@@ -179,6 +179,7 @@
         android:background="@drawable/click_bg"
         android:gravity="center_vertical"
         android:paddingLeft="25dp"
-        android:text="@string/mc_btn" />
+        android:text="@string/mc_btn"
+        android:visibility="gone" />
 
 </LinearLayout>
