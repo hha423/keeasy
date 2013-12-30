@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,11 +23,12 @@ import cn.keeasy.business.util.Sources;
 public class ZhekeActivity extends BaseActivity {
 
 	private ZhekouMod azmod;
+	private EditText mz_dsedit;
 	private ZhekouAddMod zkamod;
 	private int year, monthOfYear, dayOfMonth, dtime;
 	private Spinner mz_edit, mz_stedit, mz_ptedit;
-	private LinearLayout mz_layout, stlayout, ptlayout;
-	private TextView mz_zhe, mz_startime, mz_stoptime, mz_btnok;
+	private LinearLayout mz_layout, stlayout, ptlayout, ll_dian;
+	private TextView mz_zhe, mz_startime, mz_stoptime, mz_btnok, tv_dian;
 	private String[] zheke = { "请选折扣", "1.5 折", "2.0 折", "2.5 折", "3.0 折",
 			"3.5 折", "4.0 折", "4.5 折", "5.0 折", "5.5 折", "6.0 折", "6.5 折",
 			"7.0 折", "7.5 折", "8.0 折", "8.5 折", "9.0 折", "9.5 折" };
@@ -48,13 +50,16 @@ public class ZhekeActivity extends BaseActivity {
 		mz_startime = (TextView) findViewById(R.id.mz_startime);
 		mz_stoptime = (TextView) findViewById(R.id.mz_stoptime);
 		mz_btnok = (TextView) findViewById(R.id.mz_btnok);
+		tv_dian = (TextView) findViewById(R.id.tv_dian);
 		// mz_ok = (TextView) findViewById(R.id.mz_ok);
+		mz_dsedit = (EditText) findViewById(R.id.mz_dsedit);
 		mz_edit = (Spinner) findViewById(R.id.mz_edit);
 		mz_stedit = (Spinner) findViewById(R.id.mz_stedit);
 		mz_ptedit = (Spinner) findViewById(R.id.mz_ptedit);
 		mz_layout = (LinearLayout) findViewById(R.id.mz_layout);
 		stlayout = (LinearLayout) findViewById(R.id.stlayout);
 		ptlayout = (LinearLayout) findViewById(R.id.ptlayout);
+		ll_dian = (LinearLayout) findViewById(R.id.ll_dian);
 	}
 
 	@Override
@@ -182,12 +187,15 @@ public class ZhekeActivity extends BaseActivity {
 			if (Sources.ZHEBEAN != null && Sources.ZHEBEAN.zheKou != null
 					&& Sources.ZHEBEAN.begin != null
 					&& Sources.ZHEBEAN.end != null
-					&& ptlayout.getVisibility() == View.GONE) {
+					&& ptlayout.getVisibility() == View.GONE
+					&& mz_dsedit.getText().length() > 0) {
 				new AlertDialog.Builder(mContext)
 						.setMessage(
 								"您设置的折扣信息如下：\n限时折扣：" + Sources.ZHEBEAN.zheKou
 										+ " 折\n开始时间：" + Sources.ZHEBEAN.begin
-										+ "\n结束时间：" + Sources.ZHEBEAN.end)
+										+ "\n结束时间：" + Sources.ZHEBEAN.end
+										+ "\n限时单数："
+										+ mz_dsedit.getText().toString())
 						.setPositiveButton("没错", new OnClickListener() {
 
 							@Override
@@ -196,7 +204,8 @@ public class ZhekeActivity extends BaseActivity {
 								zkamod.mSetZheInfo(Sources.USERBEAN.shopId,
 										Sources.ZHEBEAN.zheKou,
 										Sources.ZHEBEAN.begin.substring(0, 2),
-										Sources.ZHEBEAN.end.substring(0, 2));
+										Sources.ZHEBEAN.end.substring(0, 2),
+										mz_dsedit.getText().toString().trim());
 							}
 						}).setNegativeButton("不对", null).create().show();
 			} else {
@@ -234,10 +243,14 @@ public class ZhekeActivity extends BaseActivity {
 	public void mSuccess() {
 		if (Sources.ZHEBEAN != null && !"false".equals(Sources.ZHEBEAN.type)
 				&& !"0".equals(Sources.ZHEBEAN.type)) {
+			ll_dian.setVisibility(View.GONE);
+			tv_dian.setVisibility(View.VISIBLE);
 			if (!"true".equals(Sources.ZHEBEAN.type)) {
 				mz_zhe.setText("当前折扣：" + Sources.ZHEBEAN.zheKou + " 折");
 				mz_startime.setText("开始时间：" + Sources.ZHEBEAN.begin);
 				mz_stoptime.setText("结束时间：" + Sources.ZHEBEAN.end);
+				tv_dian.setText("总单数：" + Sources.ZHEBEAN.sumNum + "单  -  剩余单数："
+						+ Sources.ZHEBEAN.endNum + "单");
 			}
 			mz_zhe.setEnabled(false);
 			mz_startime.setEnabled(false);
@@ -247,6 +260,8 @@ public class ZhekeActivity extends BaseActivity {
 			mz_zhe.setText("设置折扣");
 			mz_startime.setText("设置开始时间");
 			mz_stoptime.setText("设置结束时间");
+			ll_dian.setVisibility(View.VISIBLE);
+			tv_dian.setVisibility(View.GONE);
 			mz_btnok.setVisibility(View.VISIBLE);
 		}
 	}

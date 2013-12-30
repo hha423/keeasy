@@ -17,9 +17,10 @@ public class ZhekouAddMod extends BaseNetMod {
 
 	// 添加折扣信息
 	public void mSetZheInfo(int shopid, String zheKou, String beginTime,
-			String endTime) {
+			String endTime, String sumNum) {
 		mGetArea(IP + "updateLimitBuyShop?shopId=" + shopid + "&zheKou="
-				+ zheKou + "&beginTime=" + beginTime + "&endTime=" + endTime);
+				+ zheKou + "&beginTime=" + beginTime + "&endTime=" + endTime
+				+ "&sumNum=" + sumNum);
 	}
 
 	@Override
@@ -42,6 +43,10 @@ public class ZhekouAddMod extends BaseNetMod {
 						bean.end = ojson.getString(name);
 					} else if (name.equals("zheKou")) {
 						bean.zheKou = ojson.getString(name);
+					} else if (name.equals("sumNum")) {
+						bean.sumNum = ojson.getString(name);
+					} else if (name.equals("endNum")) {
+						bean.endNum = ojson.getString(name);
 					}
 				}
 				if (bean.type != null && "true".equals(bean.type)) {

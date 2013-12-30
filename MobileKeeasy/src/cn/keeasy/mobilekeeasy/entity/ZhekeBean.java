@@ -1,6 +1,5 @@
 package cn.keeasy.mobilekeeasy.entity;
 
-
 /**
  * 折扣bean
  * 
@@ -13,6 +12,7 @@ public class ZhekeBean {
 	public String shopName; // 商家名称
 	public String shopAddress; // 商家地址
 	public double zhekou; // 折扣
+	public String endNum; // 单数
 	public String begTime; // 开始时间
 	public String endTime; // 结束时间
 	public int by; // 排序

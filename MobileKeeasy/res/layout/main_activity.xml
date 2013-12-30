@@ -75,7 +75,7 @@
             android:layout_marginTop="1dp"
             android:layout_weight="3.0"
             android:button="@null"
-            android:drawableLeft="@drawable/radiob_more" />
+            android:drawableTop="@drawable/radiob_more" />
     </RadioGroup>
 
 </LinearLayout>

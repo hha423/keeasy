@@ -44,12 +44,14 @@ public class ZhekeAdapter extends BaseAdapter {
 		TextView btime = (TextView) convertView.findViewById(R.id.lzi_btime);
 		TextView etime = (TextView) convertView.findViewById(R.id.lzi_etime);
 		TextView zhe = (TextView) convertView.findViewById(R.id.lzi_zhe);
+		TextView dian = (TextView) convertView.findViewById(R.id.lzi_dian);
 		TextView addr = (TextView) convertView.findViewById(R.id.lzi_addr);
 
 		ZhekeBean zbean = zlist.get(position);
 		sname.setText(zbean.shopName + " (" + zbean.bAccount + ")");
 		btime.setText(zbean.begTime);
 		etime.setText(zbean.endTime);
+		dian.setText(zbean.endNum + " 单");
 		addr.setText("地址:" + zbean.shopAddress);
 		zhe.setText("" + zbean.zhekou);
 		return convertView;

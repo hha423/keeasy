@@ -40,6 +40,10 @@ public class ZhekouMod extends BaseNetMod {
 						bean.end = ojson.getString(name);
 					} else if (name.equals("zheKou")) {
 						bean.zheKou = ojson.getString(name);
+					} else if (name.equals("sumNum")) {
+						bean.sumNum = ojson.getString(name);
+					} else if (name.equals("endNum")) {
+						bean.endNum = ojson.getString(name);
 					}
 				}
 				if (bean.err != null && !"".equals(bean.err)) {

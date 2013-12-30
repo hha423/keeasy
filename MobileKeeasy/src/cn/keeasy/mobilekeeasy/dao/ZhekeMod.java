@@ -12,7 +12,6 @@ import android.content.Context;
 import cn.evan.tools.PhoneState;
 import cn.keeasy.mobilekeeasy.data.IMod;
 import cn.keeasy.mobilekeeasy.data.Sources;
-import cn.keeasy.mobilekeeasy.entity.ShopBean;
 import cn.keeasy.mobilekeeasy.entity.ZhekeBean;
 
 /**
@@ -65,6 +64,7 @@ public class ZhekeMod extends BaseNetMod {
 				sBean.zhekou = zjson.getDouble("zheKou");
 				sBean.begTime = zjson.getString("begTime");
 				sBean.endTime = zjson.getString("endTime");
+				sBean.endNum = zjson.getString("endNum");
 				sBean.shopAddress = zjson.getString("shopAddr");
 				this.maxPage = zjson.getInt("sumPage");
 				sBean.by = zjson.getInt("by");

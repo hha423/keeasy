@@ -54,6 +54,8 @@
     <string name="curzhetime">限时折扣时段调整</string>
     <string name="editzhe">请选择折扣：</string>
     <string name="mzdian">请选择一个时间：</string>
+    <string name="dian">设置单数：</string>
+    <string name="dian_hint">输入限时抢购的单数</string>
     <string name="mzok">确定</string>
     <string name="zhehint">注：设置限时折扣活动仅限当天生效，客户在下单后到店消费验证时间推迟在活动结束后三十分钟内有效。活动一旦开始需等到活动结束以后才可以进行再次修改。</string>
     

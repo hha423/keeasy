@@ -129,6 +129,38 @@
             android:textSize="14sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll_dian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dian" />
+
+        <EditText
+            android:id="@+id/mz_dsedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/dian_hint"
+            android:inputType="number"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:paddingLeft="25dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
