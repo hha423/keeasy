@@ -49,8 +49,8 @@ public class MyApplication extends Application {
 		// Initialize ImageLoader with configuration.
 		ImageLoader.getInstance().init(config);
 		// 异常处理，不需要处理时注释掉这两句即可！
-//		CrashHandler crashHandler = CrashHandler.getInstance();
-//		crashHandler.init(getApplicationContext());// 注册crashHandler
+		CrashHandler crashHandler = CrashHandler.getInstance();
+		crashHandler.init(getApplicationContext());// 注册crashHandler
 		// crashHandler.sendPreviousReportsToServer();
 	}
 

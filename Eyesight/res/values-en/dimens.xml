@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="eye_3_0">36.359985mm</dimen>
+    <dimen name="eye_3_1">28.879974mm</dimen>
+    <dimen name="eye_3_2">22.939972mm</dimen>
+    <dimen name="eye_3_3">18.21997mm</dimen>
+    <dimen name="eye_3_4">14.47998mm</dimen>
+    <dimen name="eye_3_5">11.5mm</dimen>
+    <dimen name="eye_3_6">9.129974mm</dimen>
+    <dimen name="eye_3_7">7.2599792mm</dimen>
+    <dimen name="eye_3_8">5.7599792mm</dimen>
+    <dimen name="eye_3_9">4.5799866mm</dimen>
+    <dimen name="eye_4_0">3.6399841mm</dimen>
+    <dimen name="eye_4_1">2.8899841mm</dimen>
+    <dimen name="eye_4_2">2.2999878mm</dimen>
+    <dimen name="eye_4_3">1.8199768mm</dimen>
+    <dimen name="eye_4_4">1.4499817mm</dimen>
+    <dimen name="eye_4_5">1.1499939mm</dimen>
+    <dimen name="eye_4_6">0.9100001mm</dimen>
+    <dimen name="eye_4_7">0.73mm</dimen>
+    <dimen name="eye_4_8">0.58000004mm</dimen>
+    <dimen name="eye_4_9">0.46000004mm</dimen>
+    <dimen name="eye_5_0">0.36mm</dimen>
+    <dimen name="eye_5_1">0.28999996mm</dimen>
+    <dimen name="eye_5_2">0.23000002mm</dimen>
+    <dimen name="eye_row_dis">6.0mm</dimen>
+</resources>

@@ -507,6 +507,11 @@ public class MainActivity extends BaseActivity implements OnRefreshListener,
 	@Override
 	public void mSuccess1() {
 		zheadapter.notifyDataSetChanged();
+		if (Sources.TIMZHEKE.size() > 0) {
+			mz_no.setVisibility(View.GONE);
+		} else {
+			mz_no.setVisibility(View.VISIBLE);
+		}
 	}
 
 	@Override
@@ -773,15 +778,10 @@ public class MainActivity extends BaseActivity implements OnRefreshListener,
 		zheadapter = new ZhekeAdapter(MainActivity.this);
 		zhelist.setAdapter(zheadapter);
 		zhelist.setOnLoadMoreListener(this);
-		zhereqution(zpage);
 	}
 
 	private void zheData() {
-		if (Sources.TIMZHEKE.size() > 0) {
-			mz_no.setVisibility(View.GONE);
-		} else {
-			mz_no.setVisibility(View.VISIBLE);
-		}
+		zhereqution(zpage);
 		mz_no.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

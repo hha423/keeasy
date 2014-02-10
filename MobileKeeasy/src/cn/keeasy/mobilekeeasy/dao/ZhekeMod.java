@@ -80,6 +80,7 @@ public class ZhekeMod extends BaseNetMod {
 				return one - two;
 			}
 		});
+		Sources.TIMZHEKE.clear();
 		Sources.TIMZHEKE.addAll(list);
 		mod.mSuccess1();
 	}

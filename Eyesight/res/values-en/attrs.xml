@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="backColor" format="reference|color" />
+    <attr name="textColor" format="reference|color" />
+    <attr name="backAlpha" format="reference|integer" />
+    <attr name="titleColor" format="reference|color" />
+</resources>

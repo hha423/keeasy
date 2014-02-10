@@ -245,6 +245,9 @@ public class ZhekeActivity extends BaseActivity {
 				&& !"0".equals(Sources.ZHEBEAN.type)) {
 			ll_dian.setVisibility(View.GONE);
 			tv_dian.setVisibility(View.VISIBLE);
+			if (mz_dsedit.getText().length() > 0) {
+				tv_dian.setText("总单数：" + mz_dsedit.getText().toString() + "单");
+			}
 			if (!"true".equals(Sources.ZHEBEAN.type)) {
 				mz_zhe.setText("当前折扣：" + Sources.ZHEBEAN.zheKou + " 折");
 				mz_startime.setText("开始时间：" + Sources.ZHEBEAN.begin);
