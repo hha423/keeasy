@@ -1,12 +1,21 @@
 package com.evan.eyesight;
 
+import com.evan.eyesight.adapter.MainAdapter;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.GridView;
 
+/**
+ * 视力检查主页面
+ * 
+ * @author Evan
+ * 
+ */
 public class MainActivity extends BaseActivity {
-	
+
 	private GridView gridview;
+	private MainAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +26,14 @@ public class MainActivity extends BaseActivity {
 	@Override
 	void initView() {
 		super.initView();
-		gridview = (GridView)findViewById(R.id.gridview);
+		gridview = (GridView) findViewById(R.id.gridview);
+		adapter = new MainAdapter();
 	}
 
 	@Override
 	void initData() {
 		ibtn.setImageResource(R.drawable.icon);
-		text.setText("眼睛检测－每日关注您的视力变化");
+		text.setText("眼睛检测--每日关注您的视力变化");
 	}
 
 	@Override
