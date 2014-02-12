@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <include layout="@layout/main_top" />
+
+    <ListView
+        android:id="@+id/mmo_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@null" >
+    </ListView>
+
+</LinearLayout>

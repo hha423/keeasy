@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/itembg"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/lfi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/lfi_name"
+        android:text="@string/left_kh" />
+
+    <TextView
+        android:id="@+id/lfi_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/left" />
+
+    <TextView
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lfi_num"
+        android:text="@string/right_kh" />
+
+    <TextView
+        android:id="@+id/lfi_msgnum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@id/right"
+        android:background="@drawable/msg_bg"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

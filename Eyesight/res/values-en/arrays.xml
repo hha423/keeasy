@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="str_eye_table">
+        <item>5.2 &amp;lt;1.5></item>
+        <item>5.1 &amp;lt;1.2></item>
+        <item>5.0 &amp;lt;1.0></item>
+        <item>4.9 &amp;lt;0.8></item>
+        <item>4.8 &amp;lt;0.6></item>
+        <item>4.7 &amp;lt;0.5></item>
+        <item>4.6 &amp;lt;0.4></item>
+        <item>4.5 &amp;lt;0.3></item>
+        <item>4.4 &amp;lt;0.25></item>
+        <item>4.3 &amp;lt;0.2></item>
+        <item>4.2 &amp;lt;0.15></item>
+        <item>4.1 &amp;lt;0.12></item>
+        <item>4.0 &amp;lt;0.1></item>
+        <item>3.9 &amp;lt;0.08></item>
+        <item>3.8 &amp;lt;0.06></item>
+        <item>3.7 &amp;lt;0.05></item>
+        <item>3.6 &amp;lt;0.04></item>
+        <item>3.5 &amp;lt;0.03></item>
+        <item>3.4 &amp;lt;0.025></item>
+        <item>3.3 &amp;lt;0.02></item>
+        <item>3.2 &amp;lt;0.015></item>
+        <item>3.1 &amp;lt;0.012></item>
+        <item>3.0 &amp;lt;0.01></item>
+    </string-array>
+</resources>

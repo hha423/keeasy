@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <!-- 消息列表 -->
+
+    <ListView
+        android:id="@+id/chat_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@null" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingTop="5dip" >
+
+            <!-- 更多按钮 -->
+
+            <ImageView
+                android:id="@+id/chat_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:padding="5dp"
+                android:src="@drawable/chat_more" />
+
+            <!-- 文本框 -->
+
+            <EditText
+                android:id="@+id/chat_text"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/search_bg"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:hint="@string/chatcont"
+                android:imeOptions="actionDone"
+                android:maxHeight="80dp"
+                android:maxLines="3"
+                android:padding="4dp"
+                android:textSize="14sp" />
+
+            <!-- 发送按钮 -->
+
+            <TextView
+                android:id="@+id/chat_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/send"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <!-- 更多项  每点击一次中间的项也隐藏 -->
+
+        <LinearLayout
+            android:id="@+id/chat_layout1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="50dp"
+            android:visibility="gone" >
+
+            <!-- 图片  语音状态把此按钮set成不可点 -->
+
+            <Button
+                android:id="@+id/chat_imgbtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_face" />
+
+            <!-- 拍照  语音状态把此按钮set成不可点 -->
+
+            <Button
+                android:id="@+id/chat_imgbtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/chat_photo" />
+
+            <!-- 表情  语音状态把此按钮set成不可点 -->
+
+            <Button
+                android:id="@+id/chat_imgbtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/chat_camera" />
+
+            <!-- 语音   语音状态set成文字按钮背景 msg_text 文字状态下set成语音背景 -->
+
+            <Button
+                android:id="@+id/chat_imgbtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/chat_voice" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/chat_face"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:horizontalSpacing="8dp"
+            android:numColumns="6"
+            android:verticalSpacing="6dp"
+            android:visibility="gone" >
+        </GridView>
+
+        <RelativeLayout
+            android:id="@+id/chat_layout2"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/white"
+            android:paddingTop="22dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/chat_btn_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/chat_voice_m" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chat_btn_voice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/say" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

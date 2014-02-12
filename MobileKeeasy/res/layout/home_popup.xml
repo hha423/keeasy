@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/top_bg" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/hp_radiogroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_quyu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/quyu"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/top_bg" />
+
+            <RadioButton
+                android:id="@+id/rb_fenlei"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/fenlie"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/top_bg" />
+
+            <RadioButton
+                android:id="@+id/rb_shidian"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/shiduan"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/top_bg" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/huise" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="5"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hp_full_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp" />
+
+            <TextView
+                android:id="@+id/hp_full"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/hp_full_num"
+                android:padding="8dp"
+                android:text="@string/full" />
+
+            <ExpandableListView
+                android:id="@+id/expandablelistview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hp_full"
+                android:background="@null"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:groupIndicator="@null"
+                android:listSelector="@color/huise" >
+            </ExpandableListView>
+
+            <ListView
+                android:id="@+id/hp_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hp_full"
+                android:background="@null"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="@color/huise"
+                android:visibility="gone" >
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

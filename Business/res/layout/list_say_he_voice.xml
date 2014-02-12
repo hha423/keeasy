@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout3"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dip" >
+
+    <!-- 用户头像 -->
+
+    <cn.evan.tools.ui.ImageViews
+        android:id="@+id/photo"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="14dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <!-- 消息时间   格式：2012-2-12,12:23 -->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/photo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@id/photo"
+        android:gravity="center" >
+
+        <!-- 语音按钮 -->
+
+        <cn.keeasy.business.util.ImageTextButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

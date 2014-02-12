@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <TextView
+        android:id="@+id/mc_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:text="@string/mc_pwd" />
+
+    <EditText
+        android:id="@+id/mc_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:background="@null"
+        android:hint="@string/mc_pwd_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mc_btnok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/mc_btn"
+        android:textSize="16sp" />
+
+</LinearLayout>

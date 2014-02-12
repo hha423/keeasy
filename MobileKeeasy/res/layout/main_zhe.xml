@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/mz_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/itembg"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="暂时没有收到限时活动！点我刷新"
+        android:visibility="gone" />
+
+    <cn.keeasy.mobilekeeasy.custom.ReListView
+        android:id="@+id/zhe_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null" />
+
+</LinearLayout>

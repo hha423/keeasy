@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dip" >
+
+    <!-- 消息时间   格式：2012-2-12,12:23 -->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_toLeftOf="@id/photo" />
+
+    <LinearLayout
+        android:id="@+id/liny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dip"
+        android:layout_marginLeft="30dp"
+        android:layout_toLeftOf="@id/photo"
+        android:background="@drawable/out_msg_bg" >
+
+        <!-- 消息内容 -->
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical"
+            android:textSize="15.0dip" />
+    </LinearLayout>
+    <!-- 用户头像 -->
+
+    <cn.evan.tools.ui.ImageViews
+        android:id="@+id/photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@id/liny"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="18dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/pic" />
+
+</RelativeLayout>

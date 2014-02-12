@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/xiaopiao_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40.0dip"
+            android:text="@string/rmb" />
+
+        <TextView
+            android:id="@+id/xiaopiao_price"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_weight="1.0"
+            android:textColor="@color/dimgray" />
+
+        <ImageButton
+            android:id="@+id/xiaopiao_jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_jian" />
+
+        <TextView
+            android:id="@+id/xiaopiao_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/numbg"
+            android:gravity="center"
+            android:textColor="@color/dimgray" />
+
+        <ImageButton
+            android:id="@+id/xiaopiao_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/btn_jia" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@color/huise" />
+
+</LinearLayout>

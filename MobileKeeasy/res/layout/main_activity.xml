@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_top" />
+
+    <cn.keeasy.mobilekeeasy.custom.ScrollLayout
+        android:id="@+id/main_scrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/huise" >
+
+        <include layout="@layout/main_home" />
+
+        <include layout="@layout/main_nearby" />
+
+        <include layout="@layout/main_zhe" />
+
+        <include layout="@layout/main_me" />
+
+        <include layout="@layout/main_more" />
+    </cn.keeasy.mobilekeeasy.custom.ScrollLayout>
+
+    <RadioGroup
+        android:id="@+id/main_rgroup"
+        android:layout_width="match_parent"
+        android:layout_height="53.0dip"
+        android:background="@drawable/bottom_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/btn_home"
+            android:layout_width="0.0dip"
+            android:layout_height="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2.0"
+            android:button="@null"
+            android:drawableTop="@drawable/radiob_home" />
+
+        <RadioButton
+            android:id="@+id/btn_naerby"
+            android:layout_width="0.0dip"
+            android:layout_height="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2.0"
+            android:button="@null"
+            android:drawableTop="@drawable/radiob_naerby" />
+
+        <RadioButton
+            android:id="@+id/btn_zhe"
+            android:layout_width="0.0dip"
+            android:layout_height="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2.0"
+            android:button="@null"
+            android:drawableTop="@drawable/radiob_zhe" />
+
+        <RadioButton
+            android:id="@+id/btn_me"
+            android:layout_width="0.0dip"
+            android:layout_height="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2.0"
+            android:button="@null"
+            android:drawableTop="@drawable/radiob_me" />
+
+        <RadioButton
+            android:id="@+id/btn_more"
+            android:layout_width="0.0dip"
+            android:layout_height="32dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="3.0"
+            android:button="@null"
+            android:drawableTop="@drawable/radiob_more" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/fenqu_item_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/fenqu_item_num"
+        android:paddingBottom="6dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="6dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@id/fenqu_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/fenqu_item_name"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/top_bg" />
+
+</RelativeLayout>

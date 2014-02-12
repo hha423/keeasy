@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hui"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/inc"
+        android:layout_alignParentTop="true"
+        layout="@layout/main_top" />
+
+    <LinearLayout
+        android:id="@+id/linl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inc"
+        android:layout_marginTop="10dp"
+        android:background="#fff" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/verify" />
+
+        <EditText
+            android:id="@+id/vm_edtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/verify_hint"
+            android:imeOptions="actionSend"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vm_okbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linl"
+        android:background="@drawable/click_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="@string/code" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vm_okbtn"
+        android:layout_marginBottom="48dp"
+        android:scrollbars="none" >
+
+        <cn.evan.tools.ui.MListView1
+            android:id="@+id/vm_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp" >
+        </cn.evan.tools.ui.MListView1>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#c8c8c8" />
+
+        <ImageView
+            android:id="@+id/vm_ecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/vfcode_bot" />
+    </RelativeLayout>
+
+</RelativeLayout>

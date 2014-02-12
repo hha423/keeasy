@@ -1,0 +1,15 @@
+<resources>
+
+    <!--
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- API 11 theme customizations can go here. -->
+        <!-- 背景缓存色透明，避免拖动全黑 -->
+        <item name="android:colorBackgroundCacheHint">#00000000</item>
+        <!-- 错误字体颜色 -->
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+    </style>
+
+</resources>
