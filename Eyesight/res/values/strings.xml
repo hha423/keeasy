@@ -3,5 +3,34 @@
 
     <string name="app_name">视力测查</string>
     <string name="action_settings">设置</string>
+    
+    <string name="kexue">科学原理</string>
+    <string name="kexue_text">色盲是指无法正确感知部分或全部颜色间区分的缺陷。色盲检查图是根据假同色原理设计的检查方法</string>
+    <string name="rouhe">如何测试</string>
+    <string name="rouhe_text">将手机放于观看舒适的位置，观察屏幕上出现的图案，并根据你看到内容作出正确答案。</string>
+    <string name="ctime">测试时间</string>
+    <string name="ctime_text">约1分钟</string>
+    <string name="test">开始测试</string>
+    
+    <string name="info">"检测眼睛：
+1，提供了科学专业的手机检测办法，从视力到色觉（色盲）检测，简单速度手持测试！
+2，配搭了眼保健操的图文介绍和广播音乐，每天坚持做一次，让视力保持健康！
+3，请保持测试距离大概在25cm左右！"</string>
 
+    <string name="version">当前版本：V</string>
+    <string name="about">技术支持：4168628@gmail.com</string>
+
+    <string name="yanbaojiancao1">北京版新眼保健操图解：</string>
+    <string name="yanbaojiancaostep1">"第一节：按揉攒竹穴
+用双手大拇指螺纹面分别按在两侧穴位上，其余手指自然放松，指尖抵在前额上。有节奏的按揉穴位；"</string>
+    <string name="yanbaojiancaostep2">"第二节：按压晴明穴
+用双手食指纹面分别按在两侧穴位上，其余手指自然放松，握起，呈空心拳状。有节奏地上下按压穴位；"</string>
+    <string name="yanbaojiancaostep3">"第三节：按揉四白穴
+用双手食指纹面分别按在两侧穴位上，大拇指抵在下颌凹陷处，其余手指自然放松，握起，呈空心拳状。有节奏地上下按揉穴位；"</string>
+    <string name="yanbaojiancaostep4">"第四节：按揉太阳穴，刮上眼眶
+用双手大拇指螺纹面分别按在两侧太阳穴上，其余手指自然放松，弯曲。先用大拇指按揉太阳穴，每次一圈，揉四圈。然后，大拇指不动，用双手食指的第二个关节内侧，稍加用力从眉头刮至眉梢。连刮两次，如此交替；"</string>
+    <string name="yanbaojiancaostep5">"第五节：按揉风池穴
+用双手食指和中指的螺纹面分别按在两侧穴位上，其余三指自然放松，有节奏地来回按揉穴位；"</string>
+    <string name="yanbaojiancaostep6">"第六节：揉捏耳垂，脚趾抓地
+用双手大拇指和食指的螺纹面捏住耳垂正中的眼穴，其余三指自然并拢弯曲。用大拇指和食指有节奏地揉捏穴位，同时用双脚全部脚趾做抓地运动；"</string>
 </resources>

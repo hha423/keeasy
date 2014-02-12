@@ -1,5 +1,7 @@
 package com.evan.eyesight;
 
+import com.evan.eyesight.setting.Skip;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -9,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
- * Activity����
+ * Activity父类
  * 
  * @author Evan
  * 
@@ -18,6 +20,14 @@ public class BaseActivity extends Activity implements OnClickListener {
 
 	ImageButton ibtn;
 	TextView text;
+	// 主功能项
+	public String[] tabs = { "近视检测", "色盲检测", "眼保健操", "测试记录" };
+	// 功能图标
+	public int[] mimg = { R.drawable.jinshi, R.drawable.shemang,
+			R.drawable.yanbao, R.drawable.jilu };
+	// 功能跳转页
+	public Class<?>[] page = { JinshiActivity.class, ShemangActivity.class,
+			YanbaoActivity.class, JiluActivity.class };
 
 	@Override
 	public void setContentView(int layoutResID) {
@@ -41,31 +51,26 @@ public class BaseActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 	}
 
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
 		return super.onKeyDown(keyCode, event);
 	}
 
@@ -73,7 +78,7 @@ public class BaseActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.top_back:
-			this.finish();
+			Skip.mBack(this);
 			break;
 		}
 	};

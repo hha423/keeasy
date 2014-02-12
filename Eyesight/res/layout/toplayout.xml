@@ -17,7 +17,9 @@
         android:id="@+id/top_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_toRightOf="@id/top_back"
+        android:gravity="center_vertical"
+        android:paddingLeft="40dp"
+        android:textSize="20sp" />
 
 </RelativeLayout>

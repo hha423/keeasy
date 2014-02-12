@@ -1,13 +1,19 @@
 package com.evan.eyesight;
 
-import com.evan.eyesight.adapter.MainAdapter;
-
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.TextView;
+
+import com.evan.eyesight.adapter.MainAdapter;
+import com.evan.eyesight.setting.Skip;
 
 /**
- * 视力检查主页面
+ * 瑙嗗姏妫�鏌ヤ富椤甸潰
  * 
  * @author Evan
  * 
@@ -16,6 +22,7 @@ public class MainActivity extends BaseActivity {
 
 	private GridView gridview;
 	private MainAdapter adapter;
+	private TextView vers;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +34,34 @@ public class MainActivity extends BaseActivity {
 	void initView() {
 		super.initView();
 		gridview = (GridView) findViewById(R.id.gridview);
-		adapter = new MainAdapter();
+		vers = (TextView) findViewById(R.id.ver);
+		adapter = new MainAdapter(this, tabs, mimg);
 	}
 
 	@Override
 	void initData() {
 		ibtn.setImageResource(R.drawable.icon);
-		text.setText("眼睛检测--每日关注您的视力变化");
+		text.setText("淇濇姢鎮ㄧ殑鍋ュ悍瑙嗗姏\n姣忔棩鍏虫敞鎮ㄧ殑瑙嗗姏鍙樺寲");
+		String ver = "";
+		try {
+			ver = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		vers.setText("" + ver);
+		gridview.setAdapter(adapter);
 	}
 
 	@Override
 	void initListen() {
+		gridview.setOnItemClickListener(new OnItemClickListener() {
 
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				Skip.mNext(MainActivity.this, page[arg2]);
+			}
+		});
 	}
 
 	@Override
