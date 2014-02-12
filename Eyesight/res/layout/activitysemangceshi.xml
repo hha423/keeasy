@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/toplayout" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/semangceshi" >
+
+                <TextView
+                    android:id="@+id/text_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:text=" 题目：1/10"
+                    android:textColor="@color/white"
+                    android:textSize="18.0sp" />
+
+                <ProgressBar
+                    android:id="@+id/progress_jindu"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/text_state"
+                    android:max="10"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/progressbar" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image_ceshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/semangti1" />
+
+            <EditText
+                android:id="@+id/semang_answer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/edit"
+                android:hint="请请填写你所看到的数字"
+                android:numeric="integer"
+                android:padding="5.0dip" />
+
+            <Button
+                android:id="@+id/button_gotoceshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/btn_button"
+                android:text="继续"
+                android:textColor="@color/white"
+                android:textSize="25.0sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
