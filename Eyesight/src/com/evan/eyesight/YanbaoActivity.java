@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -17,6 +19,7 @@ public class YanbaoActivity extends BaseActivity {
 	private boolean isplay;
 	private boolean flag;
 	private MediaPlayer m;
+	private Handler mhandle;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +81,10 @@ public class YanbaoActivity extends BaseActivity {
 	}
 
 	private void play() {
-		new Thread(new MyThread()).start();
+		HandlerThread thread = new HandlerThread("Mythread");
+		thread.start();
+		mhandle = new Handler(thread.getLooper());
+		mhandle.post(myrun);
 	}
 
 	private void regest() {
@@ -90,6 +96,8 @@ public class YanbaoActivity extends BaseActivity {
 
 	@Override
 	protected void onDestroy() {
+		flag = false;
+		mhandle.removeCallbacks(myrun);
 		regest();
 		super.onDestroy();
 	}
@@ -105,22 +113,24 @@ public class YanbaoActivity extends BaseActivity {
 	}
 
 	@SuppressLint("HandlerLeak")
-	Handler hand = new Handler() {
-		public void handleMessage(android.os.Message msg) {
+	Handler handle = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			super.handleMessage(msg);
 			switch (msg.what) {
 			case 0:
 				playsate.setBackgroundResource(R.drawable.play);
-				m.pause();
 				regest();
 				isplay = false;
 				hasm = false;
 				flag = false;
 				break;
 			}
-		};
+		}
 	};
 
-	public class MyThread implements Runnable {
+	Runnable myrun = new Runnable() {
+
 		@Override
 		public void run() {
 			m = MediaPlayer.create(YanbaoActivity.this, R.raw.yanbao);
@@ -136,7 +146,8 @@ public class YanbaoActivity extends BaseActivity {
 			flag = true;
 			while (flag) {
 				if (m.getDuration() - m.getCurrentPosition() < 1000) {
-					hand.sendEmptyMessage(0);
+					m.pause();
+					handle.sendEmptyMessage(0);
 					return;
 				}
 				try {
@@ -146,6 +157,6 @@ public class YanbaoActivity extends BaseActivity {
 				}
 			}
 		}
+	};
 
-	}
 }

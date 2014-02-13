@@ -8,7 +8,6 @@
     <include layout="@layout/toplayout" />
 
     <ScrollView
-        android:id="@id/scrollView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
@@ -32,7 +31,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10.0dip"
                     android:layout_marginTop="5.0dip"
-                    android:text="题目：10/10"
                     android:textColor="@color/white"
                     android:textSize="18.0sp" />
 
@@ -81,7 +79,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="15.0dip"
-                    android:background="@drawable/image_semang_piont" />
+                    android:background="@drawable/image_semang_piont"
+                    android:contentDescription="@string/app_name" />
 
                 <TextView
                     android:layout_width="wrap_content"

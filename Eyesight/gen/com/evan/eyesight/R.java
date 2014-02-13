@@ -151,23 +151,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class id {
         public static final int action_settings=0x7f0c0015;
-        public static final int button_gotoback=0x7f0c000c;
-        public static final int button_gotoceshi=0x7f0c0007;
+        public static final int button_gotoback=0x7f0c000b;
+        public static final int button_gotoceshi=0x7f0c0006;
         public static final int button_play=0x7f0c0013;
-        public static final int glist_img=0x7f0c000d;
-        public static final int glist_text=0x7f0c000e;
+        public static final int glist_img=0x7f0c000c;
+        public static final int glist_text=0x7f0c000d;
         public static final int gridview=0x7f0c0000;
-        public static final int image_ceshi=0x7f0c0005;
+        public static final int image_ceshi=0x7f0c0004;
         public static final int image_paly_state=0x7f0c0014;
         public static final int imageview=0x7f0c000f;
-        public static final int progress_jindu=0x7f0c0004;
-        public static final int rlayout_ti=0x7f0c0008;
-        public static final int scrollView1=0x7f0c0002;
-        public static final int semang_answer=0x7f0c0006;
-        public static final int text_point=0x7f0c0009;
-        public static final int text_semang_state=0x7f0c000a;
-        public static final int text_semang_zhonglei=0x7f0c000b;
-        public static final int text_state=0x7f0c0003;
+        public static final int progress_jindu=0x7f0c0003;
+        public static final int rlayout_ti=0x7f0c0007;
+        public static final int scrollView1=0x7f0c000e;
+        public static final int semang_answer=0x7f0c0005;
+        public static final int text_point=0x7f0c0008;
+        public static final int text_semang_state=0x7f0c0009;
+        public static final int text_semang_zhonglei=0x7f0c000a;
+        public static final int text_state=0x7f0c0002;
         public static final int text_top=0x7f0c0010;
         public static final int top_back=0x7f0c0011;
         public static final int top_title=0x7f0c0012;
@@ -191,26 +191,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int yanbao=0x7f050000;
     }
     public static final class string {
-        public static final int about=0x7f09000b;
+        public static final int about=0x7f09000d;
         public static final int action_settings=0x7f090001;
         public static final int app_name=0x7f090000;
         public static final int ctime=0x7f090006;
         public static final int ctime_text=0x7f090007;
-        public static final int info=0x7f090009;
+        public static final int info=0x7f09000b;
         public static final int kexue=0x7f090002;
         public static final int kexue_text=0x7f090003;
+        public static final int next=0x7f090009;
+        public static final int num=0x7f09000a;
         public static final int rouhe=0x7f090004;
         public static final int rouhe_text=0x7f090005;
         public static final int test=0x7f090008;
-        public static final int text_yanbao_yinyue=0x7f09000c;
-        public static final int version=0x7f09000a;
-        public static final int yanbaojiancao1=0x7f09000d;
-        public static final int yanbaojiancaostep1=0x7f09000e;
-        public static final int yanbaojiancaostep2=0x7f09000f;
-        public static final int yanbaojiancaostep3=0x7f090010;
-        public static final int yanbaojiancaostep4=0x7f090011;
-        public static final int yanbaojiancaostep5=0x7f090012;
-        public static final int yanbaojiancaostep6=0x7f090013;
+        public static final int text_yanbao_yinyue=0x7f09000e;
+        public static final int version=0x7f09000c;
+        public static final int yanbaojiancao1=0x7f09000f;
+        public static final int yanbaojiancaostep1=0x7f090010;
+        public static final int yanbaojiancaostep2=0x7f090011;
+        public static final int yanbaojiancaostep3=0x7f090012;
+        public static final int yanbaojiancaostep4=0x7f090013;
+        public static final int yanbaojiancaostep5=0x7f090014;
+        public static final int yanbaojiancaostep6=0x7f090015;
     }
     public static final class style {
         /** 

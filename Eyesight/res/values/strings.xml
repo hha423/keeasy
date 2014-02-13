@@ -12,6 +12,9 @@
     <string name="ctime_text">约1分钟</string>
     <string name="test">开始测试</string>
     
+    <string name="next">继续</string>
+    <string name="num">请填写您所看到的数字</string>
+    
     <string name="info">"检测眼睛：
 1，提供了科学专业的手机检测办法，从视力到色觉（色盲）检测，简单速度手持测试！
 2，配搭了眼保健操的图文介绍和广播音乐，每天坚持做一次，让视力保持健康！
