@@ -115,73 +115,75 @@ public class SemangTestActivity extends BaseActivity {
 	}
 
 	private void getRightAnswerCount(int i) {
-		if (i != 1) {
-			return;
-		}
-		String s9 = semang_answer.getText().toString();
-		if (s9.length() == 1 && s9.equals("6")) {
-			right_answer_count = 1 + right_answer_count;
-			list.add((new StringBuilder()).append(i).toString());
-		}
-		if (i == 2) {
-			String s8 = semang_answer.getText().toString();
-			if (s8.length() == 2 && s8.contains("3") && s8.contains("6")) {
+		if (i == 1) {
+			String s9 = semang_answer.getText().toString();
+			if (s9.length() == 1 && s9.equals("6"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
+		} else if (i == 2) {
+			String s8 = semang_answer.getText().toString();
+			if (s8.length() == 2 && s8.contains("3") && s8.contains("6"))
+				right_answer_count = 1 + right_answer_count;
+			else
+				list.add((new StringBuilder()).append(i).toString());
+
 		} else if (i == 3) {
 			String s7 = semang_answer.getText().toString();
 			if (s7.length() == 3 && s7.contains("8") && s7.contains("9")
-					&& s7.contains("6")) {
+					&& s7.contains("6"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
+
 		} else if (i == 4) {
 			String s6 = semang_answer.getText().toString();
 			if (s6.length() == 4 && s6.contains("8") && s6.contains("9")
-					&& s6.contains("6") && s6.contains("0")) {
+					&& s6.contains("6") && s6.contains("0"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
 		} else if (i == 5) {
 			String s5 = semang_answer.getText().toString();
 			if (s5.length() == 3 && s5.contains("8") && s5.contains("9")
-					&& s5.contains("6")) {
+					&& s5.contains("6"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
 		} else if (i == 6) {
 			String s4 = semang_answer.getText().toString();
 			if (s4.length() == 3 && s4.contains("8") && s4.contains("3")
-					&& s4.contains("5")) {
+					&& s4.contains("5"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
 		} else if (i == 7) {
 			String s3 = semang_answer.getText().toString();
 			if (s3.length() == 3 && s3.contains("6") && s3.contains("5")
-					&& s3.contains("2")) {
+					&& s3.contains("2"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
 		} else if (i == 8) {
 			String s2 = semang_answer.getText().toString();
-			if (s2.length() == 2 && s2.contains("8") && s2.contains("3")) {
+			if (s2.length() == 2 && s2.contains("8") && s2.contains("3"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
+
 		} else if (i == 9) {
 			String s1 = semang_answer.getText().toString();
-			if (s1.length() == 1 && s1.equals("6")) {
+			if (s1.length() == 1 && s1.equals("6"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
+
 		} else if (i == 10) {
 			String s = semang_answer.getText().toString();
-			if (s.length() == 2 && s.contains("5") && s.contains("6")) {
+			if (s.length() == 2 && s.contains("5") && s.contains("6"))
 				right_answer_count = 1 + right_answer_count;
+			else
 				list.add((new StringBuilder()).append(i).toString());
-			}
 		}
 	}
 

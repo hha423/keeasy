@@ -8,7 +8,6 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -27,8 +26,7 @@ public class SemangResultActivity extends BaseActivity {
 	private Button button_gotoback;
 	private Intent intent;
 	private boolean isjilu;
-	public List list;
-	public List listright;
+	public List list = new ArrayList();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,6 @@ public class SemangResultActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		intent = getIntent();
 		isjilu = intent.getBooleanExtra("isjilu", false);
-		System.out.println("jj:" + isjilu);
 		if (isjilu) {
 			initStsatejilu();
 			button_gotoceshi.setVisibility(8);
@@ -59,7 +56,7 @@ public class SemangResultActivity extends BaseActivity {
 
 	@Override
 	void initData() {
-		text.setText("色盲检测");
+		text.setText("色盲检测结果");
 		text_state.setText("题目：10/10");
 	}
 
@@ -79,12 +76,8 @@ public class SemangResultActivity extends BaseActivity {
 			break;
 
 		case R.id.button_gotoceshi:
-			Intent intent1 = new Intent();
-			intent1.setClass(getApplicationContext(), SemangTestActivity.class);
-			startActivity(intent1);
-			finish();
-			overridePendingTransition(R.anim.activity_no_anim,
-					R.anim.activity_slide_out_right);
+			Skip.mNext(this, SemangTestActivity.class, R.anim.activity_no_anim,
+					R.anim.activity_slide_out_right, true);
 			break;
 		}
 	}
@@ -105,101 +98,72 @@ public class SemangResultActivity extends BaseActivity {
 	}
 
 	private String geileixin() {
-		String s;
-		int i;
-		s = "";
-		i = 0;
-		if (i >= list.size())
-			return s;
-		Log.e((new StringBuilder("n")).append(i).toString(),
-				(String) list.get(i));
-		if (!((String) list.get(i)).equals("1")) {
-			// break;
+		String s = "";
+		for (int i = 0; i < list.size(); i++) {
+			if (((String) list.get(i)).equals("1")) {
+				if (s.equals(""))
+					s = "蓝";
+				else
+					s = (new StringBuilder(String.valueOf(s))).append(",蓝")
+							.toString();
+			} else if (((String) list.get(i)).equals("2")) {
+				if (s.equals(""))
+					s = "紫";
+				else
+					s = (new StringBuilder(String.valueOf(s))).append(",紫")
+							.toString();
+			} else if (((String) list.get(i)).equals("3")) {
+				if (s.equals(""))
+					s = "红";
+				else
+					s = (new StringBuilder(String.valueOf(s))).append(",红")
+							.toString();
+			} else if (((String) list.get(i)).equals("4")) {
+				if (s.equals(""))
+					s = "绿";
+				else
+					s = (new StringBuilder(String.valueOf(s))).append(",绿")
+							.toString();
+			} else if (((String) list.get(i)).equals("5")) {
+				if (s.equals(""))
+					s = "黄";
+				else
+					s = (new StringBuilder(String.valueOf(s))).append(",黄")
+							.toString();
+			}
 		}
-		if (s.equals(""))
-			s = "蓝";
-		else
-			s = (new StringBuilder(String.valueOf(s))).append(",蓝").toString();
-		i++;
-
-		if (((String) list.get(i)).equals("2")) {
-			if (s.equals(""))
-				s = "紫";
-			else
-				s = (new StringBuilder(String.valueOf(s))).append(",紫")
-						.toString();
-		} else if (((String) list.get(i)).equals("3")) {
-			if (s.equals(""))
-				s = "红";
-			else
-				s = (new StringBuilder(String.valueOf(s))).append(",红")
-						.toString();
-		} else if (((String) list.get(i)).equals("4")) {
-			if (s.equals(""))
-				s = "绿";
-			else
-				s = (new StringBuilder(String.valueOf(s))).append(",绿")
-						.toString();
-		} else if (((String) list.get(i)).equals("5"))
-			if (s.equals("黄"))
-				s = "";
-			else
-				s = (new StringBuilder(String.valueOf(s))).append(",黄")
-						.toString();
 		return s;
 	}
 
 	private void getYiChang() {
-		int i = 1;
-		if (i < 11)
-			;
-		int k;
 		list.clear();
-		k = 0;
-		if (k >= listright.size())
-			return;
-		String s;
-		boolean flag;
-		int j;
-		s = (new StringBuilder()).append(i).toString();
-		flag = true;
-		j = 0;
-		{
-			if (j < SemangTestActivity.list.size())
-				// break;
-				if (flag)
-					listright.add(s);
-			i++;
+		for (int i = 1; i < SemangTestActivity.list.size(); i++) {
+			if (((String) SemangTestActivity.list.get(i)).equals("1")) {
+				addleixing("1");
+				addleixing("2");
+			} else if (((String) SemangTestActivity.list.get(i)).equals("2"))
+				addleixing("3");
+			else if (((String) SemangTestActivity.list.get(i)).equals("3")) {
+				addleixing("2");
+				addleixing("3");
+				addleixing("4");
+			} else if (((String) SemangTestActivity.list.get(i)).equals("4")) {
+				addleixing("3");
+				addleixing("4");
+			} else if (((String) SemangTestActivity.list.get(i)).equals("5")) {
+				addleixing("3");
+				addleixing("4");
+			} else if (((String) SemangTestActivity.list.get(i)).equals("6"))
+				addleixing("3");
+			else if (((String) SemangTestActivity.list.get(i)).equals("7"))
+				addleixing("4");
+			else if (((String) SemangTestActivity.list.get(i)).equals("8"))
+				addleixing("2");
+			else if (((String) SemangTestActivity.list.get(i)).equals("9"))
+				addleixing("1");
+			else if (((String) SemangTestActivity.list.get(i)).equals("10"))
+				addleixing("5");
 		}
-		if (((String) SemangTestActivity.list.get(j)).equals(s))
-			flag = false;
-		j++;
-		if (((String) listright.get(k)).equals("1")) {
-			addleixing("1");
-			addleixing("2");
-		} else if (((String) listright.get(k)).equals("2"))
-			addleixing("3");
-		else if (((String) listright.get(k)).equals("3")) {
-			addleixing("2");
-			addleixing("3");
-			addleixing("4");
-		} else if (((String) listright.get(k)).equals("4")) {
-			addleixing("3");
-			addleixing("4");
-		} else if (((String) listright.get(k)).equals("5")) {
-			addleixing("3");
-			addleixing("4");
-		} else if (((String) listright.get(k)).equals("6"))
-			addleixing("3");
-		else if (((String) listright.get(k)).equals("7"))
-			addleixing("4");
-		else if (((String) listright.get(k)).equals("8"))
-			addleixing("2");
-		else if (((String) listright.get(k)).equals("9"))
-			addleixing("1");
-		else if (((String) listright.get(k)).equals("10"))
-			addleixing("5");
-		// k++;
 	}
 
 	private void initStsate() {
@@ -270,8 +234,4 @@ public class SemangResultActivity extends BaseActivity {
 		return super.onKeyDown(keyCode, event);
 	}
 
-	public SemangResultActivity() {
-		list = new ArrayList();
-		listright = new ArrayList();
-	}
 }

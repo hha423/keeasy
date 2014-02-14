@@ -19,6 +19,17 @@
     <string name="result">您的总得分为：</string>
     <string name="eye">您的色觉辨认力：</string>
     
+    <string name="time">日期</string>
+    <string name="shili">视力情况</string>
+    <string name="bianse">辨色情况</string>
+    <string name="left">左眼</string>
+    <string name="right">右眼</string>
+    <string name="fensu">分数</string>
+    <string name="jiang">结果</string>
+    <string name="clean">清空</string>
+    <string name="export">导出</string>
+    <string name="share">分享</string>
+    
     <string name="info">"检测眼睛：
 1，提供了科学专业的手机检测办法，从视力到色觉（色盲）检测，简单速度手持测试！
 2，配搭了眼保健操的图文介绍和广播音乐，每天坚持做一次，让视力保持健康！
