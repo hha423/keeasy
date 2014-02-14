@@ -28,13 +28,32 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.evan.eyesight.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="JiluActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="JinshiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="SemangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="YanbaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="SemangTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="SemangResultActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

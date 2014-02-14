@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ShemangActivity" >
+
+    <include layout="@layout/toplayout" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip" >
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/shezhi"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/text_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/kexue"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_top"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/kexue_text"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@drawable/layout_press" >
+
+                <ImageView
+                    android:id="@id/imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/semang_how"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@id/text_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/rouhe"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_top"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/rouhe_text"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:background="@drawable/layout_press" >
+
+                <ImageView
+                    android:id="@id/imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/semang_time"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@id/text_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/ctime"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_top"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginRight="15.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_toRightOf="@id/imageview"
+                    android:text="@string/ctime_text"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_gotoceshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25.0dip"
+                android:background="@drawable/btn_button"
+                android:text="@string/test"
+                android:textColor="@color/white"
+                android:textSize="25.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
