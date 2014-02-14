@@ -1,31 +1,26 @@
 package com.evan.eyesight;
 
+import com.evan.eyesight.setting.Skip;
+
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
-public class ShemangResultActivity extends BaseActivity {
+public class SemangActivity extends BaseActivity {
 
-	private TextView text_state;
-	private ProgressBar progress_jindu;
-	private ImageView image_ceshi;
-	private EditText semang_answer;
 	private Button button_gotoceshi;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		setContentView(R.layout.activitysemangresult);
+		setContentView(R.layout.shemang_main);
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	void initView() {
 		super.initView();
+		button_gotoceshi = (Button) this.findViewById(R.id.button_gotoceshi);
 	}
 
 	@Override
@@ -36,11 +31,19 @@ public class ShemangResultActivity extends BaseActivity {
 	@Override
 	void initListen() {
 		super.initListen();
+		button_gotoceshi.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		super.onClick(v);
+		switch (v.getId()) {
+		case R.id.button_gotoceshi:
+			Skip.mNext(SemangActivity.this, SemangTestActivity.class,
+					R.anim.activity_slide_in_right, R.anim.activity_no_anim,
+					true);
+			break;
+		}
 	}
 
 	@Override

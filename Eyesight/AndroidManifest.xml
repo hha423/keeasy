@@ -43,16 +43,16 @@
             android:name="JinshiActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="ShemangActivity"
+            android:name="SemangActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="YanbaoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="ShemangTestActivity"
+            android:name="SemangTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="ShemangResultActivity"
+            android:name="SemangResultActivity"
             android:screenOrientation="portrait" />
     </application>
 

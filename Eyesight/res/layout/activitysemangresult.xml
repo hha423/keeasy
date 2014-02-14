@@ -18,7 +18,6 @@
             android:orientation="vertical" >
 
             <RelativeLayout
-                android:id="@+id/rlayout_ti"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10.0dip"
@@ -35,7 +34,6 @@
                     android:textSize="18.0sp" />
 
                 <ProgressBar
-                    android:id="@id/progress_jindu"
                     style="?android:progressBarStyleHorizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30.0dip"
-                android:text="你的总得分为："
+                android:text="@string/result"
                 android:textColor="@color/black"
                 android:textSize="14.0sp" />
 
@@ -63,7 +61,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30.0dip"
-                android:text="5"
                 android:textColor="@color/black"
                 android:textSize="50.0sp"
                 android:textStyle="bold" />
@@ -87,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="15.0dip"
-                    android:text="你的色觉辨认力："
+                    android:text="@string/eye"
                     android:textColor="@color/black"
                     android:textSize="18.0sp" />
 
@@ -97,7 +94,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10.0dip"
-                    android:text="异常"
                     android:textColor="@color/text_top"
                     android:textSize="20.0sp" />
             </LinearLayout>
@@ -108,7 +104,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15.0dip"
                 android:layout_marginTop="20.0dip"
-                android:text="你可能有黄，红，绿色盲等。"
                 android:textColor="@color/black"
                 android:textSize="18.0sp" />
 
@@ -126,7 +121,7 @@
                     android:layout_marginLeft="10.0dip"
                     android:layout_weight="1.0"
                     android:background="@drawable/btn_button"
-                    android:text="重新测试"
+                    android:text="@string/retest"
                     android:textColor="@color/white"
                     android:textSize="25.0sp" />
 
@@ -139,7 +134,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_weight="1.0"
                     android:background="@drawable/btn_button"
-                    android:text="返回"
+                    android:text="@string/back"
                     android:textColor="@color/white"
                     android:textSize="25.0sp" />
             </LinearLayout>

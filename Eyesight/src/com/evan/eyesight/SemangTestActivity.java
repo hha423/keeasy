@@ -11,10 +11,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 import com.evan.eyesight.setting.Skip;
 
-public class ShemangTestActivity extends BaseActivity {
+public class SemangTestActivity extends BaseActivity {
 
 	private TextView text_state;
 	private ProgressBar progress_jindu;
@@ -22,7 +23,7 @@ public class ShemangTestActivity extends BaseActivity {
 	private EditText semang_answer;
 	private Button button_gotoceshi;
 	private int question_image[];
-	public List list = new ArrayList();
+	public static List list = new ArrayList();
 	public static int right_answer_count;
 	private int question_numble;
 
@@ -67,6 +68,15 @@ public class ShemangTestActivity extends BaseActivity {
 	void initListen() {
 		super.initListen();
 		button_gotoceshi.setOnClickListener(this);
+		semang_answer.setOnEditorActionListener(new OnEditorActionListener() {
+
+			@Override
+			public boolean onEditorAction(TextView v, int actionId,
+					KeyEvent event) {
+				gotoceshi();
+				return false;
+			}
+		});
 	}
 
 	@Override
@@ -75,7 +85,6 @@ public class ShemangTestActivity extends BaseActivity {
 		switch (v.getId()) {
 		case R.id.button_gotoceshi:
 			gotoceshi();
-
 			break;
 		}
 	}
@@ -84,9 +93,11 @@ public class ShemangTestActivity extends BaseActivity {
 		question_numble = 1 + question_numble;
 		if (question_numble == 11) {
 			getRightAnswerCount(-1 + question_numble);
-			Skip.mNext(this, ShemangResultActivity.class);
+			Skip.mNext(this, SemangResultActivity.class,
+					R.anim.activity_no_anim, R.anim.activity_slide_out_right,
+					true);
 		} else {
-			getRightAnswerCount(-1 + question_numble);
+			getRightAnswerCount(question_numble - 1);
 			setState(question_numble);
 		}
 	}
@@ -105,6 +116,7 @@ public class ShemangTestActivity extends BaseActivity {
 
 	private void getRightAnswerCount(int i) {
 		if (i != 1) {
+			return;
 		}
 		String s9 = semang_answer.getText().toString();
 		if (s9.length() == 1 && s9.equals("6")) {

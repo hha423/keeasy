@@ -26,7 +26,7 @@ public class BaseActivity extends Activity implements OnClickListener {
 	public int[] mimg = { R.drawable.jinshi, R.drawable.shemang,
 			R.drawable.yanbao, R.drawable.jilu };
 	// 功能跳转页
-	public Class<?>[] page = { JinshiActivity.class, ShemangActivity.class,
+	public Class<?>[] page = { JinshiActivity.class, SemangActivity.class,
 			YanbaoActivity.class, JiluActivity.class };
 
 	@Override
