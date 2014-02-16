@@ -11,67 +11,67 @@
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
 
         <TextView
+            android:id="@+id/j_time"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:text="@string/time" />
+            android:gravity="center_horizontal|center_vertical" />
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
 
         <TextView
+            android:id="@+id/j_left"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/left" />
+            android:gravity="center_horizontal|center_vertical" />
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
 
         <TextView
+            android:id="@+id/j_right"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/right" />
+            android:gravity="center_horizontal|center_vertical" />
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
 
         <TextView
+            android:id="@+id/j_fensu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="@string/fensu" />
+            android:gravity="center_horizontal|center_vertical" />
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
 
         <TextView
+            android:id="@+id/j_jiang"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:text="@string/jiang" />
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="1dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/gray" />
     </LinearLayout>
 

@@ -141,6 +141,11 @@
             android:background="@color/gray" />
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
     <ListView
         android:id="@+id/jilu_listview"
         android:layout_width="match_parent"
@@ -174,7 +179,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:background="@drawable/back_button"
-            android:text="@string/export"
+            android:text="@string/share"
             android:textColor="@color/white" />
 
         <Button
@@ -184,7 +189,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="10dp"
             android:background="@drawable/back_button"
-            android:text="@string/share"
+            android:text="@string/export"
             android:textColor="@color/white" />
     </LinearLayout>
 

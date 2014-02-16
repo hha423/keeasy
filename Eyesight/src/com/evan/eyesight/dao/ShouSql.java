@@ -26,6 +26,13 @@ public class ShouSql extends SQLiteOpenHelper {
 		sqlitedatabase.delete("ResulTbl", "_id=?", as);
 	}
 
+	public void delAll() {
+		if (db == null)
+			db = getWritableDatabase();
+		SQLiteDatabase sqlitedatabase = db;
+		sqlitedatabase.delete("ResulTbl", null, null); // 清空数据
+	}
+
 	public void insert(ContentValues contentvalues) {
 		SQLiteDatabase sqlitedatabase = getWritableDatabase();
 		sqlitedatabase.insert("ResulTbl", null, contentvalues);
@@ -35,7 +42,7 @@ public class ShouSql extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase sqlitedatabase) {
 		db = sqlitedatabase;
 		sqlitedatabase
-				.execSQL(" create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, str1 text,str2 text) ");
+				.execSQL(" create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, left text,right text, str1 text,str2 text) ");
 	}
 
 	public void onUpgrade(SQLiteDatabase sqlitedatabase, int i, int j) {
@@ -46,7 +53,7 @@ public class ShouSql extends SQLiteOpenHelper {
 				null, null);
 	}
 
-	private static final String CREATE_TBL = " create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, str1 text,str2 text) ";
+	private static final String CREATE_TBL = " create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, left text,right text,str1 text,str2 text) ";
 	private static final String DB_NAME = "eyeData.db";
 	private static final String TBL_NAME = "ResulTbl";
 	private SQLiteDatabase db;

@@ -23,7 +23,7 @@ public class SemangTestActivity extends BaseActivity {
 	private EditText semang_answer;
 	private Button button_gotoceshi;
 	private int question_image[];
-	public static List list = new ArrayList();
+	public static List<String> list = new ArrayList<String>();
 	public static int right_answer_count;
 	private int question_numble;
 

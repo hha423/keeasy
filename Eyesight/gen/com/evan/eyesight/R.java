@@ -150,30 +150,35 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int yanbaojiancaostep6=0x7f020032;
     }
     public static final class id {
-        public static final int action_settings=0x7f0c0018;
-        public static final int button_clean=0x7f0c000e;
-        public static final int button_export=0x7f0c0010;
+        public static final int action_settings=0x7f0c001d;
+        public static final int button_clean=0x7f0c0013;
+        public static final int button_export=0x7f0c0015;
         public static final int button_gotoback=0x7f0c000a;
         public static final int button_gotoceshi=0x7f0c0006;
-        public static final int button_play=0x7f0c0016;
-        public static final int button_share=0x7f0c000f;
+        public static final int button_play=0x7f0c001b;
+        public static final int button_share=0x7f0c0014;
         public static final int glist_img=0x7f0c000b;
         public static final int glist_text=0x7f0c000c;
         public static final int gridview=0x7f0c0000;
         public static final int image_ceshi=0x7f0c0004;
-        public static final int image_paly_state=0x7f0c0017;
-        public static final int imageview=0x7f0c0012;
-        public static final int jilu_listview=0x7f0c000d;
+        public static final int image_paly_state=0x7f0c001c;
+        public static final int imageview=0x7f0c0017;
+        public static final int j_fensu=0x7f0c0010;
+        public static final int j_jiang=0x7f0c0011;
+        public static final int j_left=0x7f0c000e;
+        public static final int j_right=0x7f0c000f;
+        public static final int j_time=0x7f0c000d;
+        public static final int jilu_listview=0x7f0c0012;
         public static final int progress_jindu=0x7f0c0003;
-        public static final int scrollView1=0x7f0c0011;
+        public static final int scrollView1=0x7f0c0016;
         public static final int semang_answer=0x7f0c0005;
         public static final int text_point=0x7f0c0007;
         public static final int text_semang_state=0x7f0c0008;
         public static final int text_semang_zhonglei=0x7f0c0009;
         public static final int text_state=0x7f0c0002;
-        public static final int text_top=0x7f0c0013;
-        public static final int top_back=0x7f0c0014;
-        public static final int top_title=0x7f0c0015;
+        public static final int text_top=0x7f0c0018;
+        public static final int top_back=0x7f0c0019;
+        public static final int top_title=0x7f0c001a;
         public static final int ver=0x7f0c0001;
     }
     public static final class layout {

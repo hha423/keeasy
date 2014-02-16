@@ -26,7 +26,7 @@ public class SemangResultActivity extends BaseActivity {
 	private Button button_gotoback;
 	private Intent intent;
 	private boolean isjilu;
-	public List list = new ArrayList();
+	public List<String> list = new ArrayList<String>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

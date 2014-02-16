@@ -1,6 +1,7 @@
 package com.evan.eyesight;
 
 import java.io.IOException;
+
 import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -97,7 +98,8 @@ public class YanbaoActivity extends BaseActivity {
 	@Override
 	protected void onDestroy() {
 		flag = false;
-		mhandle.removeCallbacks(myrun);
+		if (mhandle != null)
+			mhandle.removeCallbacks(myrun);
 		regest();
 		super.onDestroy();
 	}
