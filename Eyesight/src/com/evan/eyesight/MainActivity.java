@@ -2,12 +2,14 @@ package com.evan.eyesight;
 
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.evan.eyesight.adapter.MainAdapter;
 import com.evan.eyesight.setting.Skip;
@@ -23,6 +25,7 @@ public class MainActivity extends BaseActivity {
 	private GridView gridview;
 	private MainAdapter adapter;
 	private TextView vers;
+	private long exitTime = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,4 +74,22 @@ public class MainActivity extends BaseActivity {
 		return true;
 	}
 
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if ((System.currentTimeMillis() - exitTime) > 2000) {
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				exitTime = System.currentTimeMillis();
+			} else {
+				for (int i = 0; i < activityList.size(); i++) {
+					if (null != activityList.get(i)) {
+						activityList.get(i).finish();
+					}
+				}
+				Skip.mBack(this);
+			}
+			return true;
+		}
+		return false;
+	}
 }

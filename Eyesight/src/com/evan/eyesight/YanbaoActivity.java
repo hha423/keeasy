@@ -89,7 +89,7 @@ public class YanbaoActivity extends BaseActivity {
 	}
 
 	private void regest() {
-		if (m != null) {
+		if (m != null && m.isPlaying()) {
 			m.stop();
 			m.release();
 		}

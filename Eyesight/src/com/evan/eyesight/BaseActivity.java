@@ -1,6 +1,7 @@
 package com.evan.eyesight;
 
-import com.evan.eyesight.setting.Skip;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.evan.eyesight.setting.Skip;
+
 /**
  * Activity父类
  * 
@@ -18,8 +21,9 @@ import android.widget.TextView;
  */
 public class BaseActivity extends Activity implements OnClickListener {
 
-	ImageButton ibtn;
-	TextView text;
+	public static List<Activity> activityList = new ArrayList<Activity>();
+	public ImageButton ibtn;
+	public TextView text;
 	// 主功能项
 	public String[] tabs = { "近视检测", "色盲检测", "眼保健操", "测试记录" };
 	// 功能图标
@@ -30,8 +34,9 @@ public class BaseActivity extends Activity implements OnClickListener {
 			YanbaoActivity.class, JiluActivity.class };
 
 	@Override
-	public void setContentView(int layoutResID) {
-		super.setContentView(layoutResID);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		activityList.add(this);
 		initView();
 		initData();
 		initListen();
@@ -47,11 +52,6 @@ public class BaseActivity extends Activity implements OnClickListener {
 
 	void initListen() {
 		ibtn.setOnClickListener(this);
-	}
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 	}
 
 	@Override

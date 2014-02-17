@@ -25,7 +25,7 @@ public class SemangActivity extends BaseActivity {
 
 	@Override
 	void initData() {
-		text.setText("色盲检测");
+		text.setText("色盲测试");
 	}
 
 	@Override

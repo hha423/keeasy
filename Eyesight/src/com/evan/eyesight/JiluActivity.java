@@ -147,14 +147,38 @@ public class JiluActivity extends BaseActivity {
 			OutputStream outf = new FileOutputStream(myFilePath);
 			jxl.write.WritableWorkbook wwb = Workbook.createWorkbook(outf);
 			jxl.write.WritableSheet ws = wwb.createSheet("视力表", 0);
-			// if (dbean != null) {
-			// for (int i = 0; i < dbean.size(); i++) {
-			Label label = new Label(0, 0, "时间");
-			ws.addCell(label);
-			jxl.write.Number number = new jxl.write.Number(1, 0, 789.123);
-			ws.addCell(number);
-			// }
-			// }
+			if (dbean != null) {
+				for (int i = 0; i < dbean.size(); i++) {
+					if (i == 0) {
+						ws.addCell(new Label(0, i, "" + "测试日期"));
+						ws.addCell(new Label(1, i, "" + "左眼视力"));
+						ws.addCell(new Label(2, i, "" + "右眼视力"));
+						ws.addCell(new Label(3, i, "" + "辨色分数"));
+						ws.addCell(new Label(4, i, "" + "辨色结果"));
+					}
+					Label time = new Label(0, i + 1, "" + dbean.get(i).time);
+					ws.addCell(time);
+					if (dbean.get(i).left != null) {
+						Label left = new Label(1, i + 1, "" + dbean.get(i).left);
+						ws.addCell(left);
+					}
+					if (dbean.get(i).right != null) {
+						Label right = new Label(2, i + 1, ""
+								+ dbean.get(i).right);
+						ws.addCell(right);
+					}
+					if (dbean.get(i).point != null) {
+						Label str1 = new Label(3, i + 1, ""
+								+ dbean.get(i).point);
+						ws.addCell(str1);
+					}
+					if (dbean.get(i).result != null) {
+						Label str2 = new Label(4, i + 1, ""
+								+ dbean.get(i).result);
+						ws.addCell(str2);
+					}
+				}
+			}
 			wwb.write();
 			wwb.close();
 		} catch (Exception e) {

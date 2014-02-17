@@ -56,7 +56,7 @@ public class SemangResultActivity extends BaseActivity {
 
 	@Override
 	void initData() {
-		text.setText("色盲检测结果");
+		text.setText("色盲测试结果");
 		text_state.setText("题目：10/10");
 	}
 

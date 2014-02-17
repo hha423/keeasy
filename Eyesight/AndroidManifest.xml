@@ -54,6 +54,12 @@
         <activity
             android:name="SemangResultActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="EyeTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="EyeResultActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
