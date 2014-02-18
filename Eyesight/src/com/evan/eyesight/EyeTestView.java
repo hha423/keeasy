@@ -280,66 +280,67 @@ public class EyeTestView extends SurfaceView implements
 		InterruptedException interruptedexception;
 	}
 
-	// public boolean testIsOver(int i)
-	// {
-	// boolean flag;
-	// flag = true;
-	// if(currDrawObj == null)
-	// break MISSING_BLOCK_LABEL_220;
-	// if(arraylist != null)
-	// k = arraylist.size();
-	// if(k < flag && !refreshEShap())
-	// {
-	// flag;
-	// }
-	// l = 0;
-	// i1 = 0;
-	// iterator = arraylist.iterator();
-	// }else{
-	// return flag;}
-	//
-	// if(iterator.hasNext()){
-	// DrawObject drawobject = (DrawObject)iterator.next();
-	// if(drawobject.rst == -1)
-	// l++;
-	// else
-	// if(drawobject.rst == flag)
-	// i1++;
-	// if(refreshEShap())
-	// j = 0;
-	// else
-	// j = ((flag) ? 1 : 0);
-	// flag = j;
-	// if(i != 4){
-	// int j;
-	// int k;
-	// int l;
-	// int i1;
-	// Iterator iterator;
-	// ArrayList arraylist;
-	// if(currDrawObj.nDir == i)
-	// currDrawObj.rst = ((flag) ? 1 : 0);
-	// else
-	// currDrawObj.rst = 0;
-	// arraylist = (ArrayList)arrTest.get(Integer.valueOf(currentPos));}else{
-	// return flag;}}else{
-	// if(l > 0)
-	// {
-	// if(refreshEShap())
-	// j = 0;
-	// else
-	// j = ((flag) ? 1 : 0);
-	// } else
-	// if((i1 * 100) / k > 80)
-	// {
-	// if(refreshEShap())
-	// j = 0;
-	// else
-	// j = ((flag) ? 1 : 0);
-	// } else
-	// {
-	// j = 1;
-	// }
-	// }
+	public boolean testIsOver(int i) {
+		boolean flag;
+		flag = true;
+		// if(currDrawObj == null)
+		// break MISSING_BLOCK_LABEL_220;
+		// if(arraylist != null)
+		// k = arraylist.size();
+		// if(k < flag && !refreshEShap())
+		// {
+		// flag;
+		// }
+		// l = 0;
+		// i1 = 0;
+		// iterator = arraylist.iterator();
+		// }else{
+		// return flag;}
+		//
+		// if(iterator.hasNext()){
+		// DrawObject drawobject = (DrawObject)iterator.next();
+		// if(drawobject.rst == -1)
+		// l++;
+		// else
+		// if(drawobject.rst == flag)
+		// i1++;
+		// if(refreshEShap())
+		// j = 0;
+		// else
+		// j = ((flag) ? 1 : 0);
+		// flag = j;
+		// if(i != 4){
+		// int j;
+		// int k;
+		// int l;
+		// int i1;
+		// Iterator iterator;
+		// ArrayList arraylist;
+		// if(currDrawObj.nDir == i)
+		// currDrawObj.rst = ((flag) ? 1 : 0);
+		// else
+		// currDrawObj.rst = 0;
+		// arraylist =
+		// (ArrayList)arrTest.get(Integer.valueOf(currentPos));}else{
+		// return flag;}}else{
+		// if(l > 0)
+		// {
+		// if(refreshEShap())
+		// j = 0;
+		// else
+		// j = ((flag) ? 1 : 0);
+		// } else
+		// if((i1 * 100) / k > 80)
+		// {
+		// if(refreshEShap())
+		// j = 0;
+		// else
+		// j = ((flag) ? 1 : 0);
+		// } else
+		// {
+		// j = 1;
+		// }
+		return flag;
+	}
 
 }
