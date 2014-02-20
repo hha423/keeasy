@@ -216,7 +216,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int yanbao=0x7f050000;
     }
     public static final class string {
-        public static final int about=0x7f09001e;
+        public static final int about=0x7f090021;
         public static final int action_settings=0x7f090001;
         public static final int app_name=0x7f090000;
         public static final int back=0x7f09000d;
@@ -228,7 +228,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int export=0x7f09001a;
         public static final int eye=0x7f090011;
         public static final int fensu=0x7f090017;
-        public static final int info=0x7f09001c;
+        public static final int info=0x7f09001f;
         public static final int jiang=0x7f090018;
         public static final int jinshi_text=0x7f090004;
         public static final int kexue=0x7f090002;
@@ -244,17 +244,20 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int rouhe_text=0x7f090006;
         public static final int share=0x7f09001b;
         public static final int shili=0x7f090013;
+        public static final int str_eye_guard=0x7f09001d;
+        public static final int str_ref_value=0x7f09001c;
+        public static final int str_test_result=0x7f09001e;
         public static final int test=0x7f09000b;
-        public static final int text_yanbao_yinyue=0x7f09001f;
+        public static final int text_yanbao_yinyue=0x7f090022;
         public static final int time=0x7f090012;
-        public static final int version=0x7f09001d;
-        public static final int yanbaojiancao1=0x7f090020;
-        public static final int yanbaojiancaostep1=0x7f090021;
-        public static final int yanbaojiancaostep2=0x7f090022;
-        public static final int yanbaojiancaostep3=0x7f090023;
-        public static final int yanbaojiancaostep4=0x7f090024;
-        public static final int yanbaojiancaostep5=0x7f090025;
-        public static final int yanbaojiancaostep6=0x7f090026;
+        public static final int version=0x7f090020;
+        public static final int yanbaojiancao1=0x7f090023;
+        public static final int yanbaojiancaostep1=0x7f090024;
+        public static final int yanbaojiancaostep2=0x7f090025;
+        public static final int yanbaojiancaostep3=0x7f090026;
+        public static final int yanbaojiancaostep4=0x7f090027;
+        public static final int yanbaojiancaostep5=0x7f090028;
+        public static final int yanbaojiancaostep6=0x7f090029;
     }
     public static final class style {
         /** 

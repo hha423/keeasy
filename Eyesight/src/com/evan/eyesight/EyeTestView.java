@@ -12,7 +12,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -53,20 +52,19 @@ public class EyeTestView extends SurfaceView implements
 			// onDraw(canvas);
 			if (canvas != null)
 				srufaceHolder.unlockCanvasAndPost(canvas);
-			// continue; /* Loop/switch isn't completed */
-			Exception exception1 = null;
-			Log.e("junefsh", exception1.getMessage());
-			if (canvas != null)
-				srufaceHolder.unlockCanvasAndPost(canvas);
-			Exception exception = null;
-			if (canvas != null)
-				srufaceHolder.unlockCanvasAndPost(canvas);
-			try {
-				throw exception;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			// // continue; /* Loop/switch isn't completed */
+			// Exception exception1 = null;
+			// if (canvas != null)
+			// srufaceHolder.unlockCanvasAndPost(canvas);
+			// Exception exception = null;
+			// if (canvas != null)
+			// srufaceHolder.unlockCanvasAndPost(canvas);
+			// try {
+			// throw exception;
+			// } catch (Exception e) {
+			// // TODO Auto-generated catch block
+			// e.printStackTrace();
+			// }
 		}
 
 		public void setStop(boolean flag) {
@@ -76,10 +74,8 @@ public class EyeTestView extends SurfaceView implements
 		private boolean bStop;
 		private Paint mPaint;
 		private SurfaceHolder srufaceHolder;
-		final EyeTestView this$0;
 
 		public DrawThread(SurfaceHolder surfaceholder) {
-			this$0 = EyeTestView.this;
 			bStop = false;
 			srufaceHolder = surfaceholder;
 			mPaint = new Paint();

@@ -21,7 +21,7 @@ public class EyeTableActivity extends BaseActivity {
 		getWindow().setFlags(1024, 1024);
 		setContentView(R.layout.jinshi_frame);
 		super.onCreate(savedInstanceState);
-		strTest = getString(0x7f07000b);
+		strTest = getString(R.string.str_test_result);
 	}
 
 	@Override
@@ -74,22 +74,13 @@ public class EyeTableActivity extends BaseActivity {
 			Toast.makeText(
 					EyeTableActivity.this,
 					(new StringBuilder(String.valueOf(strTest))).append(s)
-							.toString(), 0).show();
+							.toString(), Toast.LENGTH_LONG).show();
 		}
 
-		final EyeTableActivity this$0;
-
-		private MyHander() {
-			this$0 = EyeTableActivity.this;
-		}
-
-		MyHander(MyHander myhander) {
-			this();
-		}
 	}
 
 	public EyeTableActivity() {
-		hander = new MyHander(null);
+		hander = new MyHander();
 		strTest = "Your Test Result:";
 	}
 

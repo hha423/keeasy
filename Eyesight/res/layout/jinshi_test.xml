@@ -21,18 +21,17 @@
             android:layout_height="wrap_content"
             android:background="#ff000000" >
 
-            <com.evan.eyesight.EyeTable
+            <com.evan.eyesight.EyeTestView
                 android:id="@+id/eyeT"
                 android:layout_width="fill_parent"
                 android:layout_height="240.0dip"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50.0dip" />
+                android:layout_gravity="center_horizontal"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="295.0dip"
+                android:layout_marginTop="245.0dip"
                 android:orientation="vertical" >
 
                 <ImageButton

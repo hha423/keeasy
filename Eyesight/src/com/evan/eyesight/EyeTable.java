@@ -1,7 +1,3 @@
-// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://www.kpdus.com/jad.html
-// Decompiler options: packimports(3) ansi lnc 
-
 package com.evan.eyesight;
 
 import java.util.ArrayList;
@@ -17,10 +13,26 @@ import android.view.View;
 
 import com.evan.eyesight.setting.Utils;
 
-// Referenced classes of package com.junefsh.app.eyeguard.free:
-//            Utils, DrawObject
-
 class EyeTable extends View {
+
+	private static final int STEP_MOVE = 28;
+	private float Max_Hight_E;
+	private float Max_Width_E;
+	private boolean bNeedIni;
+	private int currentScreenHeight;
+	private int currentScreenWidth;
+	private String eyeGuardStr;
+	private float fDimen[];
+	private Paint mPaint;
+	private float mPreviousX;
+	private float mPreviousY;
+	private float min_row_d;
+	private ArrayList myDrawObject;
+	private float nEye_Table_W;
+	private String refeStr;
+	private float relativePosx;
+	private float relativePosy;
+	private String strEyeTab[];
 
 	public EyeTable(Context context) {
 		super(context);
@@ -56,37 +68,37 @@ class EyeTable extends View {
 		mPaint.setAntiAlias(true);
 		mPaint.setStyle(android.graphics.Paint.Style.FILL);
 		mPaint.setColor(0xff000000);
-		refeStr = resources.getString(0x7f070004);
-		eyeGuardStr = resources.getString(0x7f070005);
+		refeStr = resources.getString(R.string.str_ref_value);
+		eyeGuardStr = resources.getString(R.string.str_eye_guard);
 		myDrawObject = new ArrayList();
-		strEyeTab = resources.getStringArray(0x7f050000);
+		strEyeTab = resources.getStringArray(R.array.str_eye_table);
 		float af[] = new float[23];
-		af[0] = resources.getDimension(0x7f060016);
-		af[1] = resources.getDimension(0x7f060015);
-		af[2] = resources.getDimension(0x7f060014);
-		af[3] = resources.getDimension(0x7f060013);
-		af[4] = resources.getDimension(0x7f060012);
-		af[5] = resources.getDimension(0x7f060011);
-		af[6] = resources.getDimension(0x7f060010);
-		af[7] = resources.getDimension(0x7f06000f);
-		af[8] = resources.getDimension(0x7f06000e);
-		af[9] = resources.getDimension(0x7f06000d);
-		af[10] = resources.getDimension(0x7f06000c);
-		af[11] = resources.getDimension(0x7f06000b);
-		af[12] = resources.getDimension(0x7f06000a);
-		af[13] = resources.getDimension(0x7f060009);
-		af[14] = resources.getDimension(0x7f060008);
-		af[15] = resources.getDimension(0x7f060007);
-		af[16] = resources.getDimension(0x7f060006);
-		af[17] = resources.getDimension(0x7f060005);
-		af[18] = resources.getDimension(0x7f060004);
-		af[19] = resources.getDimension(0x7f060003);
-		af[20] = resources.getDimension(0x7f060002);
-		af[21] = resources.getDimension(0x7f060001);
-		af[22] = resources.getDimension(0x7f060000);
+		af[0] = resources.getDimension(R.dimen.eye_5_2);
+		af[1] = resources.getDimension(R.dimen.eye_5_1);
+		af[2] = resources.getDimension(R.dimen.eye_5_0);
+		af[3] = resources.getDimension(R.dimen.eye_4_9);
+		af[4] = resources.getDimension(R.dimen.eye_4_8);
+		af[5] = resources.getDimension(R.dimen.eye_4_7);
+		af[6] = resources.getDimension(R.dimen.eye_4_6);
+		af[7] = resources.getDimension(R.dimen.eye_4_5);
+		af[8] = resources.getDimension(R.dimen.eye_4_4);
+		af[9] = resources.getDimension(R.dimen.eye_4_3);
+		af[10] = resources.getDimension(R.dimen.eye_4_2);
+		af[11] = resources.getDimension(R.dimen.eye_4_1);
+		af[12] = resources.getDimension(R.dimen.eye_4_0);
+		af[13] = resources.getDimension(R.dimen.eye_3_9);
+		af[14] = resources.getDimension(R.dimen.eye_3_8);
+		af[15] = resources.getDimension(R.dimen.eye_3_7);
+		af[16] = resources.getDimension(R.dimen.eye_3_6);
+		af[17] = resources.getDimension(R.dimen.eye_3_5);
+		af[18] = resources.getDimension(R.dimen.eye_3_4);
+		af[19] = resources.getDimension(R.dimen.eye_3_3);
+		af[20] = resources.getDimension(R.dimen.eye_3_2);
+		af[21] = resources.getDimension(R.dimen.eye_3_1);
+		af[22] = resources.getDimension(R.dimen.eye_3_0);
 		fDimen = af;
 		int i = fDimen.length;
-		min_row_d = resources.getDimension(0x7f060017);
+		min_row_d = resources.getDimension(R.dimen.eye_row_dis);
 		nEye_Table_W = (3 * currentScreenWidth) / 4;
 		int j = 0;
 		do {
@@ -155,14 +167,11 @@ class EyeTable extends View {
 		f3 = Utils.formatValidDm((f1 - f2) / 2.0F);
 		f = Utils.formatValidDm(f2 + (f + min_row_d));
 		l = 0;
-		label0: {
-			if (l < k)
-				break label0;
-			drawobject = new DrawObject(5F + nEye_Table_W,
-					Utils.formatValidDm(f - f2 / 2.0F), 4, fDimen[j], j);
-			myDrawObject.add(drawobject);
-			j--;
-		}
+		// if (l < k)
+		drawobject = new DrawObject(5F + nEye_Table_W, Utils.formatValidDm(f
+				- f2 / 2.0F), 4, fDimen[j], j);
+		myDrawObject.add(drawobject);
+		j--;
 		DrawObject drawobject1 = new DrawObject(Utils.formatValidDm(f3 + f1
 				* (float) l), f, ai[l], fDimen[j], j);
 		myDrawObject.add(drawobject1);
@@ -286,22 +295,4 @@ class EyeTable extends View {
 		bNeedIni = flag;
 	}
 
-	private static final int STEP_MOVE = 28;
-	private float Max_Hight_E;
-	private float Max_Width_E;
-	private boolean bNeedIni;
-	private int currentScreenHeight;
-	private int currentScreenWidth;
-	private String eyeGuardStr;
-	private float fDimen[];
-	private Paint mPaint;
-	private float mPreviousX;
-	private float mPreviousY;
-	private float min_row_d;
-	private ArrayList myDrawObject;
-	private float nEye_Table_W;
-	private String refeStr;
-	private float relativePosx;
-	private float relativePosy;
-	private String strEyeTab[];
 }
