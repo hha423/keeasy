@@ -1,7 +1,3 @@
-// Decompiled by Jad v1.5.8g. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://www.kpdus.com/jad.html
-// Decompiler options: packimports(3) ansi lnc 
-
 package com.evan.eyesight.setting;
 
 import java.util.Random;
@@ -11,8 +7,7 @@ import android.graphics.Paint;
 
 public class Utils {
 
-	public Utils() {
-	}
+	public static boolean bMustDrawMid = false;
 
 	public static void drawEye_E(Canvas canvas, Paint paint, int i, float f,
 			float f1, float f2, boolean flag) {
@@ -25,7 +20,7 @@ public class Utils {
 			flag1 = true;
 		else
 			flag1 = false;
-		if (flag)
+		if (flag) {
 			switch (i) {
 			default:
 				canvas.drawRect(f, f1, f + f2, f1 + 5F * f2, paint);
@@ -69,7 +64,7 @@ public class Utils {
 						paint);
 				break;
 			}
-		else
+		} else {
 			switch (i) {
 			default:
 				canvas.drawRect(f, f1 - 5F * f2, f + f2, f1, paint);
@@ -113,6 +108,7 @@ public class Utils {
 						paint);
 				break;
 			}
+		}
 	}
 
 	public static float formatDm(float f) {
@@ -161,7 +157,5 @@ public class Utils {
 		k--;
 		return ai;
 	}
-
-	public static boolean bMustDrawMid = false;
 
 }

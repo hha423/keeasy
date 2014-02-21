@@ -124,13 +124,11 @@ class EyeTable extends View {
 	}
 
 	public void initDraw() {
-		float f;
-		int j;
+		float f = 50F;
+		int i = fDimen.length;
+		int j = i - 1;
 		if (myDrawObject == null)
 			myDrawObject = new ArrayList();
-		int i = fDimen.length;
-		f = 50F;
-		j = i - 1;
 		int ai[];
 		float f1;
 		float f3;
