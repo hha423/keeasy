@@ -14,6 +14,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import com.evan.eyesight.setting.Utils;
 
@@ -38,6 +39,8 @@ public class EyeTestView extends SurfaceView implements
 				Utils.drawEye_E(canvas, mPaint, currDrawObj.nDir,
 						currDrawObj.x, currDrawObj.y, currDrawObj.dm, true);
 				bNeedReDraw = false;
+			} else {
+				System.out.println("没有值1");
 			}
 		}
 

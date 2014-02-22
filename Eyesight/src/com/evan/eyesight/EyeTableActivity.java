@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class EyeTableActivity extends BaseActivity {
@@ -13,7 +13,7 @@ public class EyeTableActivity extends BaseActivity {
 	private EyeTable eyeTab;
 	private MyHander hander;
 	private String strTest;
-	private ImageButton btn_up, btn_eye_test, btn_down;
+	private LinearLayout btn_eye_test;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,7 @@ public class EyeTableActivity extends BaseActivity {
 	void initView() {
 		super.initView();
 		eyeTab = (EyeTable) findViewById(R.id.eye_test);
-		btn_up = (ImageButton) findViewById(R.id.btn_up);
-		btn_eye_test = (ImageButton) findViewById(R.id.btn_eye_test);
-		btn_down = (ImageButton) findViewById(R.id.btn_down);
+		btn_eye_test = (LinearLayout) findViewById(R.id.btn_eye_test);
 	}
 
 	@Override
@@ -41,28 +39,18 @@ public class EyeTableActivity extends BaseActivity {
 	@Override
 	void initListen() {
 		super.initListen();
-		btn_up.setOnClickListener(this);
 		btn_eye_test.setOnClickListener(this);
-		btn_down.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
 		super.onClick(v);
 		switch (v.getId()) {
-		case R.id.btn_up:
-			if (eyeTab != null)
-				eyeTab.scroolScreen(true);
-			break;
 		case R.id.btn_eye_test:
 			Intent intent = new Intent();
 			intent.setClass(EyeTableActivity.this, EyeTestActivity.class);
 			intent.putExtra("junefsh_dm", eyeTab.getEyeDm());
 			startActivityForResult(intent, 1);
-			break;
-		case R.id.btn_down:
-			if (eyeTab != null)
-				eyeTab.scroolScreen(false);
 			break;
 		}
 	}

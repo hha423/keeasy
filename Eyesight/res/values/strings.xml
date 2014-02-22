@@ -33,6 +33,8 @@
     <string name="export">导出</string>
     <string name="share">分享</string>
     
+    <string name="single">单眼测试</string>
+    
     <string name="str_ref_value">参考值</string>
     <string name="str_eye_guard">标准视力表</string>
     <string name="str_test_result">您的视力测试结果：</string>

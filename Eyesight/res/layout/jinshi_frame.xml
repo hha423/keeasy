@@ -17,40 +17,35 @@
         android:layout_height="match_parent" >
 
         <FrameLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <com.evan.eyesight.EyeTable
                 android:id="@+id/eye_test"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
-            <ImageButton
-                android:id="@+id/btn_up"
-                android:layout_width="50.0dip"
-                android:layout_height="80.0dip"
-                android:layout_gravity="left"
-                android:layout_marginTop="60.0dip"
-                android:background="#96d9d9d9"
-                android:src="@android:drawable/arrow_up_float" />
-
-            <ImageButton
+            <LinearLayout
                 android:id="@+id/btn_eye_test"
                 android:layout_width="60.0dip"
-                android:layout_height="50.0dip"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="60.0dip"
                 android:background="#96d9d9d9"
-                android:src="@drawable/btn_eye_test" />
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical" >
 
-            <ImageButton
-                android:id="@+id/btn_down"
-                android:layout_width="50.0dip"
-                android:layout_height="80.0dip"
-                android:layout_gravity="left"
-                android:layout_marginTop="160.0dip"
-                android:background="#96d9d9d9"
-                android:src="@android:drawable/arrow_down_float" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/btn_eye_test" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/single" />
+            </LinearLayout>
         </FrameLayout>
     </ScrollView>
 

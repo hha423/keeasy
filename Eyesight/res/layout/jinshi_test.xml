@@ -13,19 +13,19 @@
     <include layout="@layout/toplayout" />
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff000000" >
 
         <FrameLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff000000" >
+            android:layout_height="wrap_content" >
 
             <com.evan.eyesight.EyeTestView
                 android:id="@+id/eyeT"
                 android:layout_width="fill_parent"
                 android:layout_height="240.0dip"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
