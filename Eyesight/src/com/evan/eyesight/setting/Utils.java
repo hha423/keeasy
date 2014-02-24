@@ -122,40 +122,35 @@ public class Utils {
 
 	public static final int[] getRandom_serial(int i) {
 		int ai[] = new int[i];
-		ai[0] = (int) (100D * Math.random()) % 4;
-		// 0 69
-		// 1 92
-		// 2 117;
-		int l1 = 0;
-		// if(l1 < i)
+		switch ((int) (100D * Math.random()) % 4) {
+		case 0:
+			for (int l1 = 0; l1 < i; l1++) {
+				ai[l1] = (l1 + 3) % 4;
+			}
+			break;
+		case 1:
+			int j1 = 0;
+			while (j1 < i) {
+				ai[j1] = (j1 + 1) % 4;
+				j1++;
+			}
+			break;
+		case 2:
+			int j = 0;
+			while (j < i) {
+				ai[j] = (j + 2) % 4;
+				j++;
+			}
+			break;
+		}
 		Random random;
-		int k;
-		random = new Random();
-		k = i - 1;
-		if (k <= 0)
-			return ai;
-		int k1 = 0;
-		while (k1 < i) {
-			ai[k1] = k1 % 4;
-			k1++;
+		for (int k = i - 1; k <= 0; k--) {
+			random = new Random();
+			int l = random.nextInt(k);
+			int i1 = ai[k];
+			ai[k] = ai[l];
+			ai[l] = i1;
 		}
-		int j1 = 0;
-		while (j1 < i) {
-			ai[j1] = (j1 + 1) % 4;
-			j1++;
-		}
-		int j = 0;
-		while (j < i) {
-			ai[j] = (j + 2) % 4;
-			j++;
-		}
-		ai[l1] = (l1 + 3) % 4;
-		l1++;
-		int l = random.nextInt(k);
-		int i1 = ai[k];
-		ai[k] = ai[l];
-		ai[l] = i1;
-		k--;
 		return ai;
 	}
 
