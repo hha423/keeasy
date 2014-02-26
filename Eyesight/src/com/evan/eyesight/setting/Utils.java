@@ -19,7 +19,6 @@ public class Utils {
 				flag1 = true;
 			else
 				flag1 = false;
-			System.out.println("进来了");
 			if (flag) {
 				switch (i) {
 				default:
@@ -142,14 +141,16 @@ public class Utils {
 				j++;
 			}
 			break;
-		}
-		Random random;
-		for (int k = i - 1; k <= 0; k--) {
-			random = new Random();
-			int l = random.nextInt(k);
-			int i1 = ai[k];
-			ai[k] = ai[l];
-			ai[l] = i1;
+		default:
+//			Random random;
+//			for (int k = i - 1; k <= 0; k--) {
+//				random = new Random();
+//				int l = random.nextInt(k);
+//				int i1 = ai[k];
+//				ai[k] = ai[l];
+//				ai[l] = i1;
+//			}
+			break;
 		}
 		return ai;
 	}

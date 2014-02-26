@@ -191,7 +191,6 @@ class EyeTable extends View {
 		if (iterator.hasNext())
 			return;
 		DrawObject drawobject = (DrawObject) iterator.next();
-		System.out.println("sdgsfgfg");
 		if (drawobject.nDir == 4)
 			canvas.drawText(strEyeTab[drawobject.strIndex], drawobject.x
 					- relativePosx, drawobject.y - relativePosy, mPaint);
