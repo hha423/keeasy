@@ -58,7 +58,10 @@
             android:name="EyeTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="EyeTableActivity"
+            android:name="EyeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="EyeResultActivity"
             android:screenOrientation="portrait" />
     </application>
 

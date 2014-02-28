@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.evan.eyesight.setting.SetConfig;
 import com.evan.eyesight.setting.Skip;
 
 public class EyeTestActivity extends BaseActivity {
@@ -16,6 +17,7 @@ public class EyeTestActivity extends BaseActivity {
 	private float mPreviousY;
 	private ImageButton btnTestUp, btnTestLeft, btnTestUnsee, btnTestRight,
 			btnTestDown;
+	private boolean flag;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,8 @@ public class EyeTestActivity extends BaseActivity {
 		btnTestUnsee = (ImageButton) findViewById(R.id.btnTestUnsee);
 		btnTestRight = (ImageButton) findViewById(R.id.btnTestRight);
 		btnTestDown = (ImageButton) findViewById(R.id.btnTestDown);
-		float af[] = getIntent().getFloatArrayExtra("junefsh_dm");
+		float af[] = getIntent().getFloatArrayExtra("App_dm");
+		flag = getIntent().getBooleanExtra("flag", false);
 		etv.setFDm(af);
 	}
 
@@ -86,9 +89,16 @@ public class EyeTestActivity extends BaseActivity {
 	}
 
 	public void finishMe() {
-		setResult(etv.getCurPos());
-		etv.shutDown();
-		Skip.mBack(this);
+		if (flag) {
+			SetConfig.righteye = etv.getCurPos();
+			Skip.mNext(this, EyeResultActivity.class, R.anim.activity_no_anim,
+					R.anim.activity_slide_out_right, true);
+		} else {
+			setResult(etv.getCurPos());
+			SetConfig.lefteye = etv.getCurPos();
+			etv.shutDown();
+			Skip.mBack(this);
+		}
 	}
 
 	public boolean onKeyDown(int i, KeyEvent keyevent) {

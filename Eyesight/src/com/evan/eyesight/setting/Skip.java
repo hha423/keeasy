@@ -52,4 +52,30 @@ public class Skip {
 		context.overridePendingTransition(enterAnim, exitAnim);
 	}
 
+	/**
+	 * 带返回值的页面跳转
+	 * 
+	 * @param context
+	 * @param cls
+	 * @param data
+	 */
+	public static void mResult(Activity context, Class<?> cls, float[] data,
+			boolean flag) {
+		Intent intent = new Intent();
+		intent.setClass(context, cls);
+		intent.putExtra("App_dm", data);
+		intent.putExtra("flag", flag);
+		context.startActivityForResult(intent, 1);
+		context.overridePendingTransition(R.anim.activity_no_anim,
+				R.anim.activity_slide_out_right);
+	}
+
+	public static void mResult(Activity context, Class<?> cls) {
+		Intent intent = new Intent();
+		intent.setClass(context, cls);
+		context.startActivityForResult(intent, 1);
+		context.overridePendingTransition(R.anim.activity_no_anim,
+				R.anim.activity_slide_out_right);
+	}
+
 }

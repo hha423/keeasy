@@ -120,37 +120,42 @@ public class Utils {
 	}
 
 	public static final int[] getRandom_serial(int i) {
+		System.out.println("ii+"+i);
 		int ai[] = new int[i];
-		switch ((int) (100D * Math.random()) % 4) {
-		case 0:
-			for (int l1 = 0; l1 < i; l1++) {
-				ai[l1] = (l1 + 3) % 4;
-			}
-			break;
-		case 1:
-			int j1 = 0;
-			while (j1 < i) {
-				ai[j1] = (j1 + 1) % 4;
-				j1++;
-			}
-			break;
-		case 2:
-			int j = 0;
-			while (j < i) {
-				ai[j] = (j + 2) % 4;
-				j++;
-			}
-			break;
-		default:
-//			Random random;
-//			for (int k = i - 1; k <= 0; k--) {
-//				random = new Random();
-//				int l = random.nextInt(k);
-//				int i1 = ai[k];
-//				ai[k] = ai[l];
-//				ai[l] = i1;
+//		switch ((int) (100D * Math.random()) % 4) {
+//		case 0:
+//			for (int l1 = 0; l1 < i; l1++) {
+//				ai[l1] = (l1 + 3) % 4;
 //			}
-			break;
+//			break;
+//		case 1:
+//			int j1 = 0;
+//			while (j1 < i) {
+//				ai[j1] = (j1 + 1) % 4;
+//				j1++;
+//			}
+//			break;
+//		case 2:
+//			int j = 0;
+//			while (j < i) {
+//				ai[j] = (j + 2) % 4;
+//				j++;
+//			}
+//			break;
+//		default:
+////			Random random;
+////			for (int k = i - 1; k <= 0; k--) {
+////				random = new Random();
+////				int l = random.nextInt(k);
+////				int i1 = ai[k];
+////				ai[k] = ai[l];
+////				ai[l] = i1;
+////			}
+//			break;
+//		}
+		for (int j = 0; j < i; j++) {
+			System.out.println("AI:"+ai[j]);
+			ai[j] = j;
 		}
 		return ai;
 	}

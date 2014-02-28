@@ -39,9 +39,8 @@ public class JinshiActivity extends BaseActivity {
 		super.onClick(v);
 		switch (v.getId()) {
 		case R.id.button_gotoceshi:
-			Skip.mNext(this, EyeTableActivity.class,
-					R.anim.activity_slide_in_right, R.anim.activity_no_anim,
-					true);
+			Skip.mNext(this, EyeActivity.class, R.anim.activity_slide_in_right,
+					R.anim.activity_no_anim, true);
 			break;
 		}
 	}

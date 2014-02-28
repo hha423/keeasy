@@ -33,7 +33,10 @@
     <string name="export">导出</string>
     <string name="share">分享</string>
     
-    <string name="single">单眼测试</string>
+    <string name="lefteye">1.捂住你的右眼，开始测试右眼视力</string>
+    <string name="righteye">2.捂住你的左眼，开始测试右眼视力</string>
+    <string name="lefttest">测试左眼</string>
+    <string name="righttest">测试右眼</string>
     
     <string name="str_ref_value">参考值</string>
     <string name="str_eye_guard">标准视力表</string>
