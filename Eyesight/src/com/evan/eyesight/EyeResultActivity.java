@@ -90,33 +90,23 @@ public class EyeResultActivity extends BaseActivity {
 	}
 
 	private void initState() {
-		String s = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(
-				System.currentTimeMillis()));
-		ContentValues contentvalues = new ContentValues();
-		contentvalues.put("leixing", "jin");
-		contentvalues.put("time", s);
-		contentvalues.put("str1",
-				(new StringBuilder()).append(SetConfig.lefteye).toString());
-		contentvalues.put("str2",
-				(new StringBuilder()).append(SetConfig.righteye).toString());
-		(new ShouSql(getApplicationContext())).insert(contentvalues);
 		getResources();
 		text_lefteye_shuzhi.setText((new StringBuilder("左眼：")).append(
 				SetConfig.lefteye).toString());
-		progress_left1.setProgress((int) (10F * SetConfig.lefteye));
-		progress_left2.setProgress((int) (10F * SetConfig.lefteye));
-		progress_left3.setProgress((int) (10F * SetConfig.lefteye));
-		progress_right1.setProgress((int) (10F * SetConfig.righteye));
-		progress_right2.setProgress((int) (10F * SetConfig.righteye));
-		progress_right3.setProgress((int) (10F * SetConfig.righteye));
+		progress_left1.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_left2.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_left3.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_right1.setProgress((int) (1.5F * SetConfig.righteye));
+		progress_right2.setProgress((int) (1.5F * SetConfig.righteye));
+		progress_right3.setProgress((int) (1.5F * SetConfig.righteye));
 		text_righteye_shuzhi.setText((new StringBuilder("右眼：")).append(
 				SetConfig.righteye).toString());
-		if ((int) (10F * SetConfig.righteye) < 6) {
+		if ((int) (10F * SetConfig.righteye) < 1.2) {
 			text_lefteye_state.setText("你的左眼视力为：严重近视");
 			progress_left3.setVisibility(0);
 			progress_left2.setVisibility(8);
 			progress_left1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.lefteye) < 10) {
+		} else if ((int) (10F * SetConfig.lefteye) < 6) {
 			progress_left2.setVisibility(0);
 			progress_left3.setVisibility(8);
 			progress_left1.setVisibility(8);
@@ -127,12 +117,12 @@ public class EyeResultActivity extends BaseActivity {
 			progress_left3.setVisibility(8);
 			text_lefteye_state.setText("你的左眼视力为：正常");
 		}
-		if ((int) (10F * SetConfig.righteye) < 6) {
+		if ((int) (10F * SetConfig.righteye) < 1.2) {
 			text_righteye_state.setText("你的右眼视力为：严重近视");
 			progress_right3.setVisibility(0);
 			progress_right2.setVisibility(8);
 			progress_right1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.righteye) < 10) {
+		} else if ((int) (10F * SetConfig.righteye) < 6) {
 			progress_right2.setVisibility(0);
 			progress_right3.setVisibility(8);
 			progress_right1.setVisibility(8);
@@ -143,26 +133,44 @@ public class EyeResultActivity extends BaseActivity {
 			progress_right3.setVisibility(8);
 			text_righteye_state.setText("你的右眼视力为：正常");
 		}
+		String s = (new SimpleDateFormat("yyyy-MM-dd HH:mm")).format(new Date(
+				System.currentTimeMillis()));
+		ContentValues contentvalues = new ContentValues();
+		contentvalues.put("leixing", "jinshi");
+		contentvalues.put("time", s);
+		contentvalues.put("left",
+				(new StringBuilder()).append(SetConfig.lefteye).toString());
+		contentvalues.put("right",
+				(new StringBuilder()).append(SetConfig.righteye).toString());
+		contentvalues.put(
+				"str1",
+				(new StringBuilder()).append(
+						text_lefteye_state.getText().toString()).toString());
+		contentvalues.put(
+				"str2",
+				(new StringBuilder()).append(
+						text_righteye_state.getText().toString()).toString());
+		(new ShouSql(getApplicationContext())).insert(contentvalues);
 	}
 
 	private void initStatejilu() {
 		getResources();
 		text_lefteye_shuzhi.setText((new StringBuilder("左眼：")).append(
 				SetConfig.lefteye).toString());
-		progress_left1.setProgress((int) (10F * SetConfig.lefteye));
-		progress_left2.setProgress((int) (10F * SetConfig.lefteye));
-		progress_left3.setProgress((int) (10F * SetConfig.lefteye));
-		progress_right1.setProgress((int) (10F * SetConfig.righteye));
-		progress_right2.setProgress((int) (10F * SetConfig.righteye));
-		progress_right3.setProgress((int) (10F * SetConfig.righteye));
+		progress_left1.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_left2.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_left3.setProgress((int) (1.5F * SetConfig.lefteye));
+		progress_right1.setProgress((int) (1.5F * SetConfig.righteye));
+		progress_right2.setProgress((int) (1.5F * SetConfig.righteye));
+		progress_right3.setProgress((int) (1.5F * SetConfig.righteye));
 		text_righteye_shuzhi.setText((new StringBuilder("右眼：")).append(
 				SetConfig.righteye).toString());
-		if ((int) (10F * SetConfig.lefteye) < 6) {
+		if ((int) (10F * SetConfig.lefteye) < 1.2) {
 			text_lefteye_state.setText("你的左眼视力为：严重近视");
 			progress_left3.setVisibility(0);
 			progress_left2.setVisibility(8);
 			progress_left1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.lefteye) < 10) {
+		} else if ((int) (10F * SetConfig.lefteye) < 6) {
 			progress_left2.setVisibility(0);
 			progress_left3.setVisibility(8);
 			progress_left1.setVisibility(8);
@@ -173,12 +181,12 @@ public class EyeResultActivity extends BaseActivity {
 			progress_left3.setVisibility(8);
 			text_lefteye_state.setText("你的左眼视力为：正常");
 		}
-		if ((int) (10F * SetConfig.righteye) < 6) {
+		if ((int) (10F * SetConfig.righteye) < 1.2) {
 			text_righteye_state.setText("你的右眼视力为：严重近视");
 			progress_right3.setVisibility(0);
 			progress_right2.setVisibility(8);
 			progress_right1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.righteye) < 10) {
+		} else if ((int) (10F * SetConfig.righteye) < 6) {
 			progress_right2.setVisibility(0);
 			progress_right3.setVisibility(8);
 			progress_right1.setVisibility(8);

@@ -18,7 +18,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.evan.eyesight.adapter.JiluAdapter;
@@ -32,6 +34,8 @@ public class JiluActivity extends BaseActivity {
 	private Button button_share;
 	private Button button_export;
 	private ListView jilu_listview;
+	private TextView ltext;
+	private LinearLayout layout;
 	private JiluAdapter adapter;
 	private ShouSql sqlite;
 	private Cursor cr;
@@ -46,6 +50,8 @@ public class JiluActivity extends BaseActivity {
 	@Override
 	void initView() {
 		super.initView();
+		ltext = (TextView) findViewById(R.id.ltext);
+		layout = (LinearLayout) findViewById(R.id.layout);
 		button_clean = (Button) findViewById(R.id.button_clean);
 		button_share = (Button) findViewById(R.id.button_share);
 		button_export = (Button) findViewById(R.id.button_export);
@@ -67,6 +73,15 @@ public class JiluActivity extends BaseActivity {
 			bean.point = cr.getString(cr.getColumnIndex("str1"));
 			bean.result = cr.getString(cr.getColumnIndex("str2"));
 			dbean.add(bean);
+		}
+		if (dbean.size() < 1) {
+			ltext.setVisibility(View.VISIBLE);
+			jilu_listview.setVisibility(View.GONE);
+			layout.setVisibility(View.GONE);
+		} else {
+			ltext.setVisibility(View.GONE);
+			jilu_listview.setVisibility(View.VISIBLE);
+			layout.setVisibility(View.VISIBLE);
 		}
 		adapter = new JiluAdapter(this, dbean);
 		jilu_listview.setAdapter(adapter);
