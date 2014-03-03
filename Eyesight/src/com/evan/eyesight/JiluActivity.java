@@ -34,7 +34,7 @@ public class JiluActivity extends BaseActivity {
 	private Button button_share;
 	private Button button_export;
 	private ListView jilu_listview;
-	private TextView ltext;
+	private TextView ltext, del;
 	private LinearLayout layout;
 	private JiluAdapter adapter;
 	private ShouSql sqlite;
@@ -51,6 +51,7 @@ public class JiluActivity extends BaseActivity {
 	void initView() {
 		super.initView();
 		ltext = (TextView) findViewById(R.id.ltext);
+		del = (TextView) findViewById(R.id.del);
 		layout = (LinearLayout) findViewById(R.id.layout);
 		button_clean = (Button) findViewById(R.id.button_clean);
 		button_share = (Button) findViewById(R.id.button_share);
@@ -78,10 +79,12 @@ public class JiluActivity extends BaseActivity {
 			ltext.setVisibility(View.VISIBLE);
 			jilu_listview.setVisibility(View.GONE);
 			layout.setVisibility(View.GONE);
+			del.setVisibility(View.GONE);
 		} else {
 			ltext.setVisibility(View.GONE);
 			jilu_listview.setVisibility(View.VISIBLE);
 			layout.setVisibility(View.VISIBLE);
+			del.setVisibility(View.VISIBLE);
 		}
 		adapter = new JiluAdapter(this, dbean);
 		jilu_listview.setAdapter(adapter);
@@ -166,30 +169,50 @@ public class JiluActivity extends BaseActivity {
 				for (int i = 0; i < dbean.size(); i++) {
 					if (i == 0) {
 						ws.addCell(new Label(0, i, "" + "测试日期"));
-						ws.addCell(new Label(1, i, "" + "左眼视力"));
-						ws.addCell(new Label(2, i, "" + "右眼视力"));
-						ws.addCell(new Label(3, i, "" + "辨色分数"));
-						ws.addCell(new Label(4, i, "" + "辨色结果"));
+						ws.addCell(new Label(1, i, "" + "测试项目"));
 					}
 					Label time = new Label(0, i + 1, "" + dbean.get(i).time);
 					ws.addCell(time);
+					if (dbean.get(i).type != null) {
+						Label type;
+						if (dbean.get(i).type.equals("jinshi")) {
+							type = new Label(1, i + 1, "视力测试");
+						} else if (dbean.get(i).type.equals("semang")) {
+							type = new Label(1, i + 1, "色盲测试");
+						}
+						type = new Label(1, i + 1, "" + dbean.get(i).type);
+						ws.addCell(type);
+					}
 					if (dbean.get(i).left != null) {
-						Label left = new Label(1, i + 1, "" + dbean.get(i).left);
+						Label left = new Label(2, i + 1, "左眼视力："
+								+ dbean.get(i).left);
 						ws.addCell(left);
 					}
+					if (dbean.get(i).point != null) {
+						Label str1 = null;
+						if (dbean.get(i).type.equals("jinshi")) {
+							str1 = new Label(3, i + 1, "视力情况："
+									+ dbean.get(i).point);
+						} else if (dbean.get(i).type.equals("semang")) {
+							str1 = new Label(2, i + 1, "辨色分数："
+									+ dbean.get(i).point);
+						}
+						ws.addCell(str1);
+					}
 					if (dbean.get(i).right != null) {
-						Label right = new Label(2, i + 1, ""
+						Label right = new Label(4, i + 1, "左眼视力："
 								+ dbean.get(i).right);
 						ws.addCell(right);
 					}
-					if (dbean.get(i).point != null) {
-						Label str1 = new Label(3, i + 1, ""
-								+ dbean.get(i).point);
-						ws.addCell(str1);
-					}
 					if (dbean.get(i).result != null) {
-						Label str2 = new Label(4, i + 1, ""
-								+ dbean.get(i).result);
+						Label str2 = null;
+						if (dbean.get(i).type.equals("jinshi")) {
+							str2 = new Label(5, i + 1, "视力情况："
+									+ dbean.get(i).result);
+						} else if (dbean.get(i).type.equals("semang")) {
+							str2 = new Label(3, i + 1, "辨色结果："
+									+ dbean.get(i).result);
+						}
 						ws.addCell(str2);
 					}
 				}

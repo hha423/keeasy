@@ -32,6 +32,10 @@ public class EyeTestView extends SurfaceView implements
 
 	private class DrawThread extends Thread {
 
+		private boolean bStop;
+		private Paint mPaint;
+		private SurfaceHolder srufaceHolder;
+
 		private void onDraw(Canvas canvas) {
 			if (currDrawObj != null) {
 				canvas.drawColor(-1);
@@ -42,40 +46,38 @@ public class EyeTestView extends SurfaceView implements
 		}
 
 		public void run() {
-			Canvas canvas;
-			do
-				if (bStop)
-					return;
-			while (!bNeedReDraw && fDm.length < 1);
-			canvas = null;
-			canvas = srufaceHolder.lockCanvas(null);
-			// onDraw(canvas);
-			if (canvas != null)
-				srufaceHolder.unlockCanvasAndPost(canvas);
-			// // continue; /* Loop/switch isn't completed */
-			// Exception exception1 = null;
-			// if (canvas != null)
-			// srufaceHolder.unlockCanvasAndPost(canvas);
-			// Exception exception = null;
-			// if (canvas != null)
-			// srufaceHolder.unlockCanvasAndPost(canvas);
-			// try {
-			// throw exception;
-			// } catch (Exception e) {
-			// // TODO Auto-generated catch block
-			// e.printStackTrace();
-			// }
+			Canvas canvas = null;
+			do {
+				try {
+					if (bStop)
+						return;
+					canvas = srufaceHolder.lockCanvas(null);
+					System.out.println("dr");
+					if (currDrawObj != null) {
+						System.out.println("f");
+						canvas.drawColor(-1);
+						Utils.drawEye_E(canvas, mPaint, currDrawObj.nDir,
+								currDrawObj.x, currDrawObj.y, currDrawObj.dm,
+								true);
+						bNeedReDraw = false;
+					}
+				} catch (Exception e) {
+					if (canvas != null)
+						srufaceHolder.unlockCanvasAndPost(canvas);
+					e.printStackTrace();
+				} finally {
+					if (canvas != null)
+						srufaceHolder.unlockCanvasAndPost(canvas);
+				}
+			} while (!bNeedReDraw && fDm.length < 1);
 		}
 
 		public void setStop(boolean flag) {
 			bStop = flag;
 		}
 
-		private boolean bStop;
-		private Paint mPaint;
-		private SurfaceHolder srufaceHolder;
-
 		public DrawThread(SurfaceHolder surfaceholder) {
+			super("junefsh-drw");
 			bStop = false;
 			srufaceHolder = surfaceholder;
 			mPaint = new Paint();
@@ -87,6 +89,7 @@ public class EyeTestView extends SurfaceView implements
 
 	public EyeTestView(Context context) {
 		super(context);
+		System.out.println("ev");
 		fDm = new float[0];
 		arrTest = new HashMap();
 		currentPos = 0;
@@ -99,6 +102,7 @@ public class EyeTestView extends SurfaceView implements
 
 	public EyeTestView(Context context, AttributeSet attributeset) {
 		super(context, attributeset);
+		System.out.println("ev1");
 		fDm = new float[0];
 		arrTest = new HashMap();
 		currentPos = 0;
@@ -111,6 +115,7 @@ public class EyeTestView extends SurfaceView implements
 
 	public EyeTestView(Context context, AttributeSet attributeset, int i) {
 		super(context, attributeset, i);
+		System.out.println("evi");
 		fDm = new float[0];
 		arrTest = new HashMap();
 		currentPos = 0;
@@ -127,58 +132,52 @@ public class EyeTestView extends SurfaceView implements
 	}
 
 	private void updateFDM() {
-		int j;
 		int i = fDm.length;
 		currentPos = i - 1;
-		j = i - 1;
-		ArrayList arraylist;
+		int j = i - 1;
+		ArrayList arraylist = (ArrayList) arrTest.get(Integer.valueOf(j));
 		int ai[];
 		float f1;
 		float f2;
-		int k;
-		if (j < 0) {
-			refreshEShap();
-			return;
-		}
-		arraylist = (ArrayList) arrTest.get(Integer.valueOf(j));
 		if (arraylist == null) {
 			arraylist = new ArrayList();
 			arrTest.put(Integer.valueOf(j), arraylist);
 		}
-		byte byte0;
+		byte byte0 = 0;
 		float f;
-		if (j < 5)
-			byte0 = 8;
-		else if (j < 6)
-			byte0 = 7;
-		else if (j < 7)
-			byte0 = 6;
-		else if (j < 8)
-			byte0 = 5;
-		else if (j < 11)
-			byte0 = 4;
-		else if (j < 15)
-			byte0 = 3;
-		else if (j < 19)
-			byte0 = 2;
-		else
-			byte0 = 1;
-		ai = Utils.getRandom_serial(byte0);
-		f = Utils.formatValidDm(5F * fDm[j]);
-		f1 = Utils.formatValidDm(((float) width - f) / 2.0F);
-		if (f1 < 0.0F)
-			f1 = 0.0F;
-		f2 = Utils.formatValidDm(((float) height - f) / 2.0F);
-		if (f2 < 0.0F)
-			f2 = 0.0F;
-		k = 0;
-		{
-			// if (k < byte0)
-			// break;
+		for (int k = 0; k < byte0; k++) {
+			if (j < 5)
+				byte0 = 8;
+			else if (j < 6)
+				byte0 = 7;
+			else if (j < 7)
+				byte0 = 6;
+			else if (j < 8)
+				byte0 = 5;
+			else if (j < 11)
+				byte0 = 4;
+			else if (j < 15)
+				byte0 = 3;
+			else if (j < 19)
+				byte0 = 2;
+			else
+				byte0 = 1;
+			ai = Utils.getRandom_serial(byte0);
+			f = Utils.formatValidDm(5F * fDm[j]);
+			f1 = Utils.formatValidDm(((float) width - f) / 2.0F);
+			if (f1 < 0.0F)
+				f1 = 0.0F;
+			f2 = Utils.formatValidDm(((float) height - f) / 2.0F);
+			if (f2 < 0.0F)
+				f2 = 0.0F;
+			arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
 			j--;
+			if (j < 0) {
+				refreshEShap();
+				return;
+			}
 		}
-		arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
-		k++;
+
 	}
 
 	public int getCurPos() {
@@ -193,6 +192,7 @@ public class EyeTestView extends SurfaceView implements
 	}
 
 	public boolean refreshEShap() {
+		System.out.println("re");
 		boolean flag;
 		int i = 0;
 		Iterator iterator;
@@ -200,20 +200,22 @@ public class EyeTestView extends SurfaceView implements
 		ArrayList arraylist = (ArrayList) arrTest.get(Integer
 				.valueOf(currentPos));
 		if (arraylist == null)
-			// break MISSING_BLOCK_LABEL_148;
-			i = arraylist.size();
+			arraylist = new ArrayList();
+		i = arraylist.size();
 		iterator = arraylist.iterator();
+		for (Object object : arraylist) {
+			System.out.println("hh:" + object);
+		}
 		if (iterator.hasNext()) {
-			// label0:
-			{
-				DrawObject drawobject = (DrawObject) iterator.next();
-				if (drawobject.rst != -1)
-					// break label0;
-					currDrawObj = drawobject;
-			}
+			System.out.println("ff:" + iterator);
+			DrawObject drawobject = (DrawObject) iterator.next();
+			if (drawobject.rst != -1)
+				// break label0;
+				currDrawObj = drawobject;
 		}
 		if (i == 0) {
 			currentPos = -1 + currentPos;
+			System.out.println("cp：" + currentPos);
 			if (currentPos > 0)
 				currDrawObj = (DrawObject) ((ArrayList) arrTest.get(Integer
 						.valueOf(currentPos))).get(0);
@@ -239,21 +241,20 @@ public class EyeTestView extends SurfaceView implements
 			return;
 		try {
 			thDraw.join();
+			flag = false;
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		flag = false;
-		// continue; /* Loop/switch isn't completed */
-		InterruptedException interruptedexception;
 	}
 
 	public void surfaceChanged(SurfaceHolder surfaceholder, int i, int j, int k) {
+		System.out.println("1");
 	}
 
 	public void surfaceCreated(SurfaceHolder surfaceholder) {
 		getDrawThd();
 		thDraw.start();
+		System.out.println("dd");
 	}
 
 	public void surfaceDestroyed(SurfaceHolder surfaceholder) {
@@ -267,13 +268,10 @@ public class EyeTestView extends SurfaceView implements
 		}
 		try {
 			thDraw.join();
+			flag = false;
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		flag = false;
-		// continue; /* Loop/switch isn't completed */
-		InterruptedException interruptedexception;
 	}
 
 	public boolean testIsOver(int i) {

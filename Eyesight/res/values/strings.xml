@@ -30,6 +30,7 @@
     <string name="export">导出</string>
     <string name="share">分享</string>
     <string name="nojilu">暂无记录，请返回测试！</string>
+    <string name="longd">长按记录删除</string>
     
     <string name="lefteye">1.捂住你的右眼，开始测试右眼视力</string>
     <string name="righteye">2.捂住你的左眼，开始测试右眼视力</string>

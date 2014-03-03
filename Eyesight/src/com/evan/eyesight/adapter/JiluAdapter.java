@@ -75,7 +75,7 @@ public class JiluAdapter extends BaseAdapter {
 			if (dbean.result != null)
 				holder.jilu_text4.setText("" + dbean.result);
 		} else if (dbean.type.equals("semang")) {
-			holder.text_item.setText("辨色测试");
+			holder.text_item.setText("色盲测试");
 			holder.jilu_image.setImageResource(R.drawable.shemang);
 			if (dbean.point != null)
 				holder.jilu_text1.setText("辨色分数：" + dbean.point);
