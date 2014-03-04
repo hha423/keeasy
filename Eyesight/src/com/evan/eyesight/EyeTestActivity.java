@@ -40,7 +40,6 @@ public class EyeTestActivity extends BaseActivity {
 		af = getIntent().getFloatArrayExtra("App_dm");
 		flag = getIntent().getBooleanExtra("flag", false);
 		etv.setFDm(af);
-		etv.refreshEShap();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.evan.eyesight;
+package com.evan.eyesight.setting;
 
 public class DrawObject {
 
@@ -11,10 +11,10 @@ public class DrawObject {
 		strIndex = j;
 	}
 
-	float dm;
-	int nDir;
-	int rst;
-	int strIndex;
-	float x;
-	float y;
+	public float dm;
+	public int nDir;
+	public int rst;
+	public int strIndex;
+	public float x;
+	public float y;
 }
