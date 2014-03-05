@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 
 import com.evan.eyesight.setting.SetConfig;
 import com.evan.eyesight.setting.Skip;
+import com.evan.eyesight.setting.Utils;
 
 public class EyeTestActivity extends BaseActivity {
 
@@ -17,8 +18,8 @@ public class EyeTestActivity extends BaseActivity {
 	private ImageButton btnTestUp, btnTestLeft, btnTestUnsee, btnTestRight,
 			btnTestDown;
 	private boolean flag;
-	private float af[];
 	private String strEyeTab[];
+	private float fDimen[];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,9 @@ public class EyeTestActivity extends BaseActivity {
 		btnTestUnsee = (ImageButton) findViewById(R.id.btnTestUnsee);
 		btnTestRight = (ImageButton) findViewById(R.id.btnTestRight);
 		btnTestDown = (ImageButton) findViewById(R.id.btnTestDown);
-		af = getIntent().getFloatArrayExtra("App_dm");
 		flag = getIntent().getBooleanExtra("flag", false);
-		etv.setFDm(af);
+		fDimen = getEyeDm();
+		etv.setFDm(fDimen);
 	}
 
 	@Override
@@ -105,7 +106,7 @@ public class EyeTestActivity extends BaseActivity {
 
 	public float getTestResult(int i) {
 		float s;
-		if (i > 0 && i < af.length)
+		if (i > 0 && i < fDimen.length)
 			s = Float.parseFloat(strEyeTab[i]);
 		else
 			s = Float.parseFloat(strEyeTab[-1 + strEyeTab.length]);
@@ -149,5 +150,43 @@ public class EyeTestActivity extends BaseActivity {
 		} else
 			alertdialog = null;
 		return alertdialog;
+	}
+
+	private float[] getEyeDm() {
+		float af[] = new float[23];
+		Resources resources = getResources();
+		af[0] = resources.getDimension(R.dimen.eye_5_2);
+		af[1] = resources.getDimension(R.dimen.eye_5_1);
+		af[2] = resources.getDimension(R.dimen.eye_5_0);
+		af[3] = resources.getDimension(R.dimen.eye_4_9);
+		af[4] = resources.getDimension(R.dimen.eye_4_8);
+		af[5] = resources.getDimension(R.dimen.eye_4_7);
+		af[6] = resources.getDimension(R.dimen.eye_4_6);
+		af[7] = resources.getDimension(R.dimen.eye_4_5);
+		af[8] = resources.getDimension(R.dimen.eye_4_4);
+		af[9] = resources.getDimension(R.dimen.eye_4_3);
+		af[10] = resources.getDimension(R.dimen.eye_4_2);
+		af[11] = resources.getDimension(R.dimen.eye_4_1);
+		af[12] = resources.getDimension(R.dimen.eye_4_0);
+		af[13] = resources.getDimension(R.dimen.eye_3_9);
+		af[14] = resources.getDimension(R.dimen.eye_3_8);
+		af[15] = resources.getDimension(R.dimen.eye_3_7);
+		af[16] = resources.getDimension(R.dimen.eye_3_6);
+		af[17] = resources.getDimension(R.dimen.eye_3_5);
+		af[18] = resources.getDimension(R.dimen.eye_3_4);
+		af[19] = resources.getDimension(R.dimen.eye_3_3);
+		af[20] = resources.getDimension(R.dimen.eye_3_2);
+		af[21] = resources.getDimension(R.dimen.eye_3_1);
+		af[22] = resources.getDimension(R.dimen.eye_3_0);
+		fDimen = af;
+		int i = fDimen.length;
+		int j = 0;
+		do {
+			if (j >= i)
+				return fDimen;
+			float f = Utils.formatDm(fDimen[j]);
+			fDimen[j] = f;
+			j++;
+		} while (true);
 	}
 }

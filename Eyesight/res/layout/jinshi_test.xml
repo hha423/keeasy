@@ -14,8 +14,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ff000000" >
+        android:layout_height="match_parent" >
 
         <FrameLayout
             android:layout_width="fill_parent"
@@ -39,6 +38,7 @@
                     android:layout_width="60.0dip"
                     android:layout_height="60.0dip"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/app_name"
                     android:src="@android:drawable/arrow_up_float" />
 
                 <LinearLayout
@@ -51,18 +51,21 @@
                         android:id="@+id/btnTestLeft"
                         android:layout_width="60.0dip"
                         android:layout_height="60.0dip"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/arrow_left_float" />
 
                     <ImageButton
                         android:id="@+id/btnTestUnsee"
                         android:layout_width="60.0dip"
                         android:layout_height="60.0dip"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/btn_unsee" />
 
                     <ImageButton
                         android:id="@+id/btnTestRight"
                         android:layout_width="60.0dip"
                         android:layout_height="60.0dip"
+                        android:contentDescription="@string/app_name"
                         android:src="@drawable/arrow_right_float" />
                 </LinearLayout>
 
@@ -71,6 +74,7 @@
                     android:layout_width="60.0dip"
                     android:layout_height="60.0dip"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/app_name"
                     android:src="@android:drawable/arrow_down_float" />
             </LinearLayout>
         </FrameLayout>

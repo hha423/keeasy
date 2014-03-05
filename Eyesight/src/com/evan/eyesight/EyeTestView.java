@@ -179,22 +179,24 @@ public class EyeTestView extends SurfaceView implements
 		flag = true;
 		ArrayList arraylist = (ArrayList) arrTest.get(Integer
 				.valueOf(currentPos));
-		i = arraylist.size();
-		iterator = arraylist.iterator();
-		while (iterator.hasNext()) {
-			DrawObject drawobject = (DrawObject) iterator.next();
-			if (drawobject.rst != -1)
-				break;
-			currDrawObj = drawobject;
-			if (i == 0) {
-				currentPos = -1 + currentPos;
-				if (currentPos > 0)
-					currDrawObj = (DrawObject) ((ArrayList) arrTest.get(Integer
-							.valueOf(currentPos))).get(0);
-				else
-					flag = false;
+		if(arraylist!=null){
+			i = arraylist.size();
+			iterator = arraylist.iterator();
+			while (iterator.hasNext()) {
+				DrawObject drawobject = (DrawObject) iterator.next();
+				if (drawobject.rst != -1)
+					break;
+				currDrawObj = drawobject;
+				if (i == 0) {
+					currentPos = -1 + currentPos;
+					if (currentPos > 0)
+						currDrawObj = (DrawObject) ((ArrayList) arrTest.get(Integer
+								.valueOf(currentPos))).get(0);
+					else
+						flag = false;
+				}
+				i--;
 			}
-			i--;
 		}
 		if (flag)
 			bNeedReDraw = true;

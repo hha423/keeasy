@@ -88,6 +88,7 @@ public class JiluActivity extends BaseActivity {
 		}
 		adapter = new JiluAdapter(this, dbean);
 		jilu_listview.setAdapter(adapter);
+		jilu_listview.setSelection(dbean.size());
 	}
 
 	@Override
@@ -174,13 +175,12 @@ public class JiluActivity extends BaseActivity {
 					Label time = new Label(0, i + 1, "" + dbean.get(i).time);
 					ws.addCell(time);
 					if (dbean.get(i).type != null) {
-						Label type;
+						Label type = null;
 						if (dbean.get(i).type.equals("jinshi")) {
 							type = new Label(1, i + 1, "视力测试");
 						} else if (dbean.get(i).type.equals("semang")) {
 							type = new Label(1, i + 1, "色盲测试");
 						}
-						type = new Label(1, i + 1, "" + dbean.get(i).type);
 						ws.addCell(type);
 					}
 					if (dbean.get(i).left != null) {

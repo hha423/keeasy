@@ -59,11 +59,9 @@ public class Skip {
 	 * @param cls
 	 * @param data
 	 */
-	public static void mResult(Activity context, Class<?> cls, float[] data,
-			boolean flag) {
+	public static void mResult(Activity context, Class<?> cls, boolean flag) {
 		Intent intent = new Intent();
 		intent.setClass(context, cls);
-		intent.putExtra("App_dm", data);
 		intent.putExtra("flag", flag);
 		context.startActivityForResult(intent, 1);
 		context.overridePendingTransition(R.anim.activity_no_anim,
