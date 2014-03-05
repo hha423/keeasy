@@ -21,7 +21,7 @@ public class Utils {
 				flag1 = false;
 			if (flag) {
 				switch (i) {
-				default:
+				default: // 向右
 					canvas.drawRect(f, f1, f + f2, f1 + 5F * f2, paint);
 					canvas.drawRect(f + f2, f1, f + 5F * f2, f1 + f2, paint);
 					if (flag1)
@@ -31,7 +31,7 @@ public class Utils {
 							* f2, paint);
 					break;
 
-				case 0: // '\0'
+				case 0: // '\0' 向上
 					canvas.drawRect(f, f1, f + f2, f1 + 4F * f2, paint);
 					if (flag1)
 						canvas.drawRect(f + 2.0F * f2, f1, f + 3F * f2, f1 + 4F
@@ -42,7 +42,7 @@ public class Utils {
 							paint);
 					break;
 
-				case 2: // '\002'
+				case 2: // '\002' 向下
 					canvas.drawRect(f, f1, f + 5F * f2, f1 + f2, paint);
 					canvas.drawRect(f, f1 + f2, f + f2, f1 + 5F * f2, paint);
 					if (flag1)
@@ -52,7 +52,7 @@ public class Utils {
 							* f2, paint);
 					break;
 
-				case 1: // '\001'
+				case 1: // '\001'向左
 					canvas.drawRect(f, f1, f + 4F * f2, f1 + f2, paint);
 					if (flag1)
 						canvas.drawRect(f, f1 + 2.0F * f2, f + 4F * f2, f1 + 3F

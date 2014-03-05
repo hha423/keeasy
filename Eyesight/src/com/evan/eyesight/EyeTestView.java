@@ -83,9 +83,7 @@ public class EyeTestView extends SurfaceView implements
 		}
 
 		public void oDraw(Canvas canvas) {
-			System.out.println("draw");
 			if (currDrawObj != null) {
-				System.out.println("drawing");
 				canvas.drawColor(-1);
 				Utils.drawEye_E(canvas, mPaint, currDrawObj.nDir,
 						currDrawObj.x, currDrawObj.y, currDrawObj.dm, true);
@@ -96,7 +94,6 @@ public class EyeTestView extends SurfaceView implements
 		@Override
 		public void run() {
 			Canvas canvas = null;
-			System.out.println("run");
 			do {
 				if (bStop)
 					return;
@@ -119,72 +116,49 @@ public class EyeTestView extends SurfaceView implements
 	}
 
 	private void updateFDM() {
-		System.out.println("update");
-		int j;
-        int i = fDm.length;
-        currentPos = i - 1;
-        j = i - 1;
-_L1:
-        ArrayList arraylist;
-        int ai[];
-        float f1;
-        float f2;
-        int k;
-        if(j < 0)
-        {
-            refreshEShap();
-            return;
-        }
-        arraylist = (ArrayList)arrTest.get(Integer.valueOf(j));
-        if(arraylist == null)
-        {
-            arraylist = new ArrayList();
-            arrTest.put(Integer.valueOf(j), arraylist);
-        }
-        byte byte0;
-        float f;
-        if(j < 5)
-            byte0 = 8;
-        else
-        if(j < 6)
-            byte0 = 7;
-        else
-        if(j < 7)
-            byte0 = 6;
-        else
-        if(j < 8)
-            byte0 = 5;
-        else
-        if(j < 11)
-            byte0 = 4;
-        else
-        if(j < 15)
-            byte0 = 3;
-        else
-        if(j < 19)
-            byte0 = 2;
-        else
-            byte0 = 1;
-        ai = Utils.getRandom_serial(byte0);
-        f = Utils.formatValidDm(5F * fDm[j]);
-        f1 = Utils.formatValidDm(((float)width - f) / 2.0F);
-        if(f1 < 0.0F)
-            f1 = 0.0F;
-        f2 = Utils.formatValidDm(((float)height - f) / 2.0F);
-        if(f2 < 0.0F)
-            f2 = 0.0F;
-        k = 0;
-_L2:
-label0:
-        {
-            if(k < byte0)
-                break label0;
-            j--;
-        }
-          goto _L1
-        arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
-        k++;
-          goto _L2
+		int i = fDm.length;
+		currentPos = i - 1;
+		ArrayList arraylist = null;
+		int ai[];
+		float f1;
+		float f2;
+		byte byte0;
+		float f;
+		for (int j = i - 1; j > 0; j--) {
+			arraylist = (ArrayList) arrTest.get(Integer.valueOf(j));
+			if (arraylist == null) {
+				arraylist = new ArrayList();
+				arrTest.put(Integer.valueOf(j), arraylist);
+			}
+			if (j < 5)
+				byte0 = 8;
+			else if (j < 6)
+				byte0 = 7;
+			else if (j < 7)
+				byte0 = 6;
+			else if (j < 8)
+				byte0 = 5;
+			else if (j < 11)
+				byte0 = 4;
+			else if (j < 15)
+				byte0 = 3;
+			else if (j < 19)
+				byte0 = 2;
+			else
+				byte0 = 1;
+			ai = Utils.getRandom_serial(byte0);
+			f = Utils.formatValidDm(5F * fDm[j]);
+			f1 = Utils.formatValidDm(((float) width - f) / 2.0F);
+			if (f1 < 0.0F)
+				f1 = 0.0F;
+			f2 = Utils.formatValidDm(((float) height - f) / 2.0F);
+			if (f2 < 0.0F)
+				f2 = 0.0F;
+			for (int k = 0; k < byte0; k++) {
+				arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
+			}
+		}
+		refreshEShap();
 	}
 
 	public int getCurPos() {
@@ -199,7 +173,6 @@ label0:
 	}
 
 	public boolean refreshEShap() {
-		System.out.println("refresh");
 		boolean flag;
 		int i;
 		Iterator iterator;
@@ -247,6 +220,7 @@ label0:
 	}
 
 	public void surfaceChanged(SurfaceHolder surfaceholder, int i, int j, int k) {
+		Utils.bMustDrawMid = true;
 	}
 
 	public void surfaceCreated(SurfaceHolder surfaceholder) {
@@ -272,67 +246,64 @@ label0:
 	}
 
 	public boolean testIsOver(int i) {
-		System.out.println("test");
 		boolean flag;
 		flag = true;
-		// if(currDrawObj == null)
-		// break MISSING_BLOCK_LABEL_220;
-		// if(arraylist != null)
-		// k = arraylist.size();
-		// if(k < flag && !refreshEShap())
-		// {
-		// flag;
-		// }
-		// l = 0;
-		// i1 = 0;
-		// iterator = arraylist.iterator();
-		// }else{
-		// return flag;}
-		//
-		// if(iterator.hasNext()){
-		// DrawObject drawobject = (DrawObject)iterator.next();
-		// if(drawobject.rst == -1)
-		// l++;
-		// else
-		// if(drawobject.rst == flag)
-		// i1++;
-		// if(refreshEShap())
-		// j = 0;
-		// else
-		// j = ((flag) ? 1 : 0);
-		// flag = j;
-		// if(i != 4){
-		// int j;
+		if (i != 4) {
+			if (currDrawObj.nDir == i) {
+				updateFDM();
+				flag = false;
+			}
+		}
+		// if (currDrawObj != null) {
+		// if (i != 4) {
+		// boolean j;
 		// int k;
 		// int l;
 		// int i1;
 		// Iterator iterator;
 		// ArrayList arraylist;
-		// if(currDrawObj.nDir == i)
+		// if (currDrawObj.nDir == i)
 		// currDrawObj.rst = ((flag) ? 1 : 0);
 		// else
 		// currDrawObj.rst = 0;
-		// arraylist =
-		// (ArrayList)arrTest.get(Integer.valueOf(currentPos));}else{
-		// return flag;}}else{
-		// if(l > 0)
-		// {
-		// if(refreshEShap())
-		// j = 0;
+		// arraylist = (ArrayList) arrTest
+		// .get(Integer.valueOf(currentPos));
+		// if (arraylist != null) {
+		// k = arraylist.size();
+		// if (k < 1 && !refreshEShap()) {
+		// return flag;
+		// }
+		// l = 0;
+		// i1 = 0;
+		// iterator = arraylist.iterator();
+		// while (iterator.hasNext()) {
+		// DrawObject drawobject = (DrawObject) iterator.next();
+		// if (drawobject.rst == -1)
+		// l++;
+		// else if (drawobject.rst == 1)
+		// i1++;
+		// }
+		// if (l > 0) {
+		// if (refreshEShap())
+		// j = false;
 		// else
-		// j = ((flag) ? 1 : 0);
-		// } else
-		// if((i1 * 100) / k > 80)
-		// {
-		// if(refreshEShap())
-		// j = 0;
+		// j = ((flag) ? true : false);
+		// } else if ((i1 * 100) / k > 80) {
+		// if (refreshEShap())
+		// j = false;
 		// else
-		// j = ((flag) ? 1 : 0);
-		// } else
-		// {
-		// j = 1;
+		// j = ((flag) ? true : false);
+		// } else {
+		// j = true;
+		// }
+		// if (refreshEShap())
+		// j = false;
+		// else
+		// j = ((flag) ? true : false);
+		// flag = j;
+		// }
+		// }
 		// }
 		return flag;
 	}
-
 }
