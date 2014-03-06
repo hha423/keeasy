@@ -147,6 +147,7 @@ public class EyeTestView extends SurfaceView implements
 			else
 				byte0 = 1;
 			ai = Utils.getRandom_serial(byte0);
+			System.out.println("J:" + j);
 			f = Utils.formatValidDm(5F * fDm[j]);
 			f1 = Utils.formatValidDm(((float) width - f) / 2.0F);
 			if (f1 < 0.0F)
@@ -179,7 +180,7 @@ public class EyeTestView extends SurfaceView implements
 		flag = true;
 		ArrayList arraylist = (ArrayList) arrTest.get(Integer
 				.valueOf(currentPos));
-		if(arraylist!=null){
+		if (arraylist != null) {
 			i = arraylist.size();
 			iterator = arraylist.iterator();
 			while (iterator.hasNext()) {
@@ -190,8 +191,8 @@ public class EyeTestView extends SurfaceView implements
 				if (i == 0) {
 					currentPos = -1 + currentPos;
 					if (currentPos > 0)
-						currDrawObj = (DrawObject) ((ArrayList) arrTest.get(Integer
-								.valueOf(currentPos))).get(0);
+						currDrawObj = (DrawObject) ((ArrayList) arrTest
+								.get(Integer.valueOf(currentPos))).get(0);
 					else
 						flag = false;
 				}
@@ -222,7 +223,6 @@ public class EyeTestView extends SurfaceView implements
 	}
 
 	public void surfaceChanged(SurfaceHolder surfaceholder, int i, int j, int k) {
-		Utils.bMustDrawMid = true;
 	}
 
 	public void surfaceCreated(SurfaceHolder surfaceholder) {
@@ -250,9 +250,17 @@ public class EyeTestView extends SurfaceView implements
 	public boolean testIsOver(int i) {
 		boolean flag;
 		flag = true;
+		ArrayList arraylist = (ArrayList) arrTest.get(Integer
+				.valueOf(currentPos));
+		System.out.println("num:" + arraylist.size());
+		for (int j = 0; j < arraylist.size(); j++) {
+			DrawObject drawobject = (DrawObject) arraylist.iterator().next();
+			System.out.println("x:" + j + "+d&:" + drawobject.nDir);
+			System.out.println("x:" + j + "+x&:" + drawobject.x);
+			System.out.println("x:" + j + "+y&:" + drawobject.y);
+		}
 		if (i != 4) {
 			if (currDrawObj.nDir == i) {
-				updateFDM();
 				flag = false;
 			}
 		}
