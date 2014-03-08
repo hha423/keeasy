@@ -102,6 +102,7 @@ public class EyeTestView extends SurfaceView implements
 				if (canvas != null)
 					srufaceHolder.unlockCanvasAndPost(canvas);
 			} while (!bNeedReDraw && fDm.length < 1);
+			System.out.println("id");
 		}
 
 		public void setStop(boolean flag) {
@@ -157,6 +158,7 @@ public class EyeTestView extends SurfaceView implements
 				f2 = 0.0F;
 			for (int k = 0; k < byte0; k++) {
 				arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
+				// System.out.println("k:" + k + "&" + fDm[j]);
 			}
 		}
 		refreshEShap();
@@ -182,6 +184,7 @@ public class EyeTestView extends SurfaceView implements
 				.valueOf(currentPos));
 		if (arraylist != null) {
 			i = arraylist.size();
+			System.out.println("I:" + i);
 			iterator = arraylist.iterator();
 			while (iterator.hasNext()) {
 				DrawObject drawobject = (DrawObject) iterator.next();
@@ -250,6 +253,9 @@ public class EyeTestView extends SurfaceView implements
 	public boolean testIsOver(int i) {
 		boolean flag;
 		flag = true;
+		currentPos--;
+		shutDown();
+		refreshEShap();
 		ArrayList arraylist = (ArrayList) arrTest.get(Integer
 				.valueOf(currentPos));
 		System.out.println("num:" + arraylist.size());
