@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.evan.eyesight"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.3" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -20,6 +20,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
         android:allowBackup="true"
@@ -37,32 +38,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="JiluActivity"
+            android:name=".JiluActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="JinshiActivity"
+            android:name=".JinshiActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="SemangActivity"
+            android:name=".SemangActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="YanbaoActivity"
+            android:name=".YanbaoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="SemangTestActivity"
+            android:name=".SemangTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="SemangResultActivity"
+            android:name=".SemangResultActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="EyeTestActivity"
+            android:name=".EyeTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="EyeActivity"
+            android:name=".EyeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="EyeResultActivity"
+            android:name=".EyeResultActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dialog"
+            android:theme="@style/dialog" />
     </application>
 
 </manifest>

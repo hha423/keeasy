@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -188,5 +189,58 @@ public class EyeTestActivity extends BaseActivity {
 			fDimen[j] = f;
 			j++;
 		} while (true);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		System.out.println("tt");
+		boolean flag;
+		float f;
+		float f1;
+		flag = true;
+		f = event.getX();
+		f1 = event.getY();
+		System.out.println("touch:" + event.getAction() + "," + f + ";" + f1);
+
+		// switch (motionevent.getAction()) {
+		// case value:
+		//
+		// break;
+		//
+		// default:
+		// break;
+		// }
+		// flag = super.onTouchEvent(motionevent);
+		// _L9:
+		// return flag;
+		// _L2:
+		// mPreviousX = f;
+		// mPreviousY = f1;
+		// continue; /* Loop/switch isn't completed */
+		// _L3:
+		// float f2;
+		// float f3;
+		// f2 = f - mPreviousX;
+		// f3 = f1 - mPreviousY;
+		// if(f2 <= 0.0F) goto _L5; else goto _L4
+		// _L4:
+		// if(Math.abs(f3 / f2) < 1.0F && etv.testIsOver(3))
+		// finishMe();
+		// _L7:
+		// if(f3 <= 0.0F)
+		// break; /* Loop/switch isn't completed */
+		// if(Math.abs(f2 / f3) < 1.0F && etv.testIsOver(2))
+		// finishMe();
+		// continue; /* Loop/switch isn't completed */
+		// _L5:
+		// if(f2 < 0.0F && Math.abs(f3 / f2) < 1.0F && etv.testIsOver(1))
+		// finishMe();
+		// if(true) goto _L7; else goto _L6
+		// _L6:
+		// if(f3 < 0.0F && Math.abs(f2 / f3) < 1.0F && etv.testIsOver(0))
+		// finishMe();
+		// if(true) goto _L9; else goto _L8
+		// _L8:
+		return super.onTouchEvent(event);
 	}
 }

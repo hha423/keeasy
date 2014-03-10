@@ -93,20 +93,22 @@ public class EyeResultActivity extends BaseActivity {
 		getResources();
 		text_lefteye_shuzhi.setText((new StringBuilder("左眼：")).append(
 				SetConfig.lefteye).toString());
-		progress_left1.setProgress((int) (1.5F * SetConfig.lefteye));
-		progress_left2.setProgress((int) (1.5F * SetConfig.lefteye));
-		progress_left3.setProgress((int) (1.5F * SetConfig.lefteye));
-		progress_right1.setProgress((int) (1.5F * SetConfig.righteye));
-		progress_right2.setProgress((int) (1.5F * SetConfig.righteye));
-		progress_right3.setProgress((int) (1.5F * SetConfig.righteye));
 		text_righteye_shuzhi.setText((new StringBuilder("右眼：")).append(
 				SetConfig.righteye).toString());
-		if ((int) (10F * SetConfig.righteye) < 1.2) {
+		int left = ((int) (1000F * SetConfig.lefteye));
+		int reight = ((int) (1000F * SetConfig.righteye));
+		progress_left1.setProgress(left);
+		progress_left2.setProgress(left);
+		progress_left3.setProgress(left);
+		progress_right1.setProgress(reight);
+		progress_right2.setProgress(reight);
+		progress_right3.setProgress(reight);
+		if (left < 100) {
 			text_lefteye_state.setText("你的左眼视力为：严重近视");
 			progress_left3.setVisibility(0);
 			progress_left2.setVisibility(8);
 			progress_left1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.lefteye) < 6) {
+		} else if (left < 800) {
 			progress_left2.setVisibility(0);
 			progress_left3.setVisibility(8);
 			progress_left1.setVisibility(8);
@@ -117,12 +119,12 @@ public class EyeResultActivity extends BaseActivity {
 			progress_left3.setVisibility(8);
 			text_lefteye_state.setText("你的左眼视力为：正常");
 		}
-		if ((int) (10F * SetConfig.righteye) < 1.2) {
+		if (reight < 100) {
 			text_righteye_state.setText("你的右眼视力为：严重近视");
 			progress_right3.setVisibility(0);
 			progress_right2.setVisibility(8);
 			progress_right1.setVisibility(8);
-		} else if ((int) (10F * SetConfig.righteye) < 6) {
+		} else if (reight < 800) {
 			progress_right2.setVisibility(0);
 			progress_right3.setVisibility(8);
 			progress_right1.setVisibility(8);

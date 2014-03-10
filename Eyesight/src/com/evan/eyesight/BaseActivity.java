@@ -11,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.evan.eyesight.setting.CrashHandler;
 import com.evan.eyesight.setting.Skip;
 
 /**
@@ -37,6 +38,10 @@ public class BaseActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		activityList.add(this);
+		// 异常处理，不需要处理时注释掉这两句即可！
+		CrashHandler crashHandler = CrashHandler.getInstance();
+		crashHandler.init(getApplicationContext());// 注册crashHandler
+		// crashHandler.sendPreviousReportsToServer();
 		initView();
 		initData();
 		initListen();

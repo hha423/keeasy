@@ -45,7 +45,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_lefteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbar" />
 
                 <ProgressBar
@@ -57,7 +57,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_lefteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbaryb" />
 
                 <ProgressBar
@@ -69,7 +69,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_lefteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbaryz" />
             </RelativeLayout>
 
@@ -108,7 +108,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_righteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbar" />
 
                 <ProgressBar
@@ -120,7 +120,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_righteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbaryb" />
 
                 <ProgressBar
@@ -132,7 +132,7 @@
                     android:layout_marginRight="10.0dip"
                     android:layout_marginTop="10.0dip"
                     android:layout_toRightOf="@id/text_righteye_shuzhi"
-                    android:max="15"
+                    android:max="1500"
                     android:progressDrawable="@drawable/progressbaryz" />
             </RelativeLayout>
 

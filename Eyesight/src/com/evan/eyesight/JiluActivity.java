@@ -26,6 +26,7 @@ import android.widget.Toast;
 import com.evan.eyesight.adapter.JiluAdapter;
 import com.evan.eyesight.dao.DataBean;
 import com.evan.eyesight.dao.ShouSql;
+import com.evan.eyesight.setting.Skip;
 import com.evan.eyesight.setting.Tools;
 
 public class JiluActivity extends BaseActivity {
@@ -145,8 +146,8 @@ public class JiluActivity extends BaseActivity {
 		case R.id.button_export:
 			if (dbean.size() > 0) {
 				toExcel();
-				Toast.makeText(JiluActivity.this, "记录已保存到sd卡根目录",
-						Toast.LENGTH_SHORT).show();
+				Skip.mNext(JiluActivity.this, Dialog.class,
+						R.anim.activity_no_anim, R.anim.activity_no_anim, false);
 			} else {
 				Toast.makeText(JiluActivity.this, "暂无记录，无法导出",
 						Toast.LENGTH_SHORT).show();
@@ -157,7 +158,7 @@ public class JiluActivity extends BaseActivity {
 
 	private void toExcel() {
 		// 新建Excel文件
-		File myFilePath = new File(Tools.getFilePath(""), "视力结果.xls");
+		File myFilePath = new File(Tools.getFilePath(""), "EyeResult.xls");
 		try {
 			if (myFilePath.exists())
 				myFilePath.delete();
