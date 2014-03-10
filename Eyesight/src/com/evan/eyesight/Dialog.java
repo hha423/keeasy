@@ -18,7 +18,7 @@ public class Dialog extends Activity implements OnClickListener {
 	private TextView msg;
 	private Button yes;
 	private Button no;
-	private EditText mail;
+	private EditText mails;
 	private EditText nick;
 
 	public Dialog() {
@@ -31,7 +31,7 @@ public class Dialog extends Activity implements OnClickListener {
 		msg = (TextView) findViewById(R.id.msg);
 		no = (Button) findViewById(R.id.button_no);
 		yes = (Button) findViewById(R.id.button_yes);
-		mail = (EditText) findViewById(R.id.mail);
+		mails = (EditText) findViewById(R.id.mails);
 		nick = (EditText) findViewById(R.id.nick);
 		initData();
 	}
@@ -49,19 +49,19 @@ public class Dialog extends Activity implements OnClickListener {
 			Skip.mBack(this);
 			break;
 		case R.id.button_yes:
-			if (mail.length() < 1) {
-				mail.setError("邮箱不能为空");
-			} else if (!mail.getText().toString().contains("@")) {
-				mail.setError("邮箱格式不正确");
-			} else if (!mail.getText().toString().contains(".")) {
-				mail.setError("邮箱格式不正确");
+			if (mails.length() < 1) {
+				mails.setError("邮箱不能为空");
+			} else if (!mails.getText().toString().contains("@")) {
+				mails.setError("邮箱格式不正确");
+			} else if (!mails.getText().toString().contains(".")) {
+				mails.setError("邮箱格式不正确");
 			} else if (nick.length() < 1) {
 				nick.setError("姓名不能为空");
 				nick.requestFocus();
 			} else {
 				yes.requestFocus();
 				EmailSender sender = new EmailSender();
-				sender.sendMail(mail.getText().toString().trim(),
+				sender.sendMail(mails.getText().toString().trim(),
 						Tools.getFilePath("") + "/EyeResult.xls", nick
 								.getText().toString().trim());
 				Toast.makeText(this, "发送成功！", Toast.LENGTH_SHORT).show();

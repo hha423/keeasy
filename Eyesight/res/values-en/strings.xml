@@ -3,5 +3,69 @@
 
     <string name="app_name">Eyesight</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="kexue">Scientific principle</string>
+    <string name="kexue_text">Color blindness is a portion or all of the defects can not distinguish between the correct color perception. Check the map is color-blind screening method based on false principles of design with color</string>
+    <string name="jinshi_text">Read the text of the main testing myopic vision, if you force the low myopia may be biased high degree of myopia or hyperopia, presbyopia caused</string>
+    <string name="rouhe">How to Test</string>
+    <string name="rouhe_text">Put the phone in a comfortable viewing position, the observed pattern appears on the screen, and make you see the correct answer based on the content.</string>
+    <string name="rouhe_jinshi">Put in the position of the phone about 25cm away from the eyes, on the viewing screen in the direction E and the Select button below the screen or to the slide in the same direction; alternating left and right eye test</string>
+    <string name="ctime">Test time</string>
+    <string name="ctime_text">About 1 minute</string>
+    <string name="ctime_two">About 2 minute</string>
+    <string name="test">Begin testing</string>
+    <string name="retest">Retest</string>
+    <string name="back">Return</string>
+    
+    <string name="next">Continue</string>
+    <string name="num">Please fill in the numbers you see</string>
+    <string name="result">Your overall score:</string>
+    <string name="eye">Your color vision recognizable force:</string>
+    
+    <string name="left">Left eye:</string>
+    <string name="right">Right eye:</string>
+    <string name="fensu">Score:</string>
+    <string name="jiang">Results:</string>
+    <string name="clean">Empty</string>
+    <string name="export">Export</string>
+    <string name="share">Share</string>
+    <string name="nojilu">No records, please return the test!</string>
+    <string name="longd">Long press to delete records</string>
+    
+    <string name="lefteye">1 cover your right eye began to test visual acuity</string>
+    <string name="righteye">2 cover your left eye began to test visual acuity</string>
+    <string name="lefttest">Left eye test</string>
+    <string name="righttest">Right eye test</string>
+    
+    <string name="str_ref_value">Reference</string>
+    <string name="str_eye_guard">Standard vision chart</string>
+    <string name="str_test_result">Your eyesight test results:</string>
+    <string name="mails">Please enter the recipient\'s mailbox</string>
+    <string name="nick">Please enter your name</string>
+    <string name="yes">Send</string>
+    <string name="no">Need not</string>
+    
+    <string name="info">"Detection Eyes: 
+1, to provide a scientific professional mobile detection methods, from vision to color vision (color blindness) detection, simple speed handheld test! 
+2, match the graphic description of eye exercises and broadcast music, insist on doing once a day, so stay healthy eyesight! 
+3, keep the measuring distance in about 25cm!"</string>
 
+    <string name="version">Current version:V</string>
+    <string name="about">Technical support:hmail520@tom.com</string>
+
+    <string name="text_yanbao_yinyue">"Eye exercises carried out immediately: 
+Click on the play button on the right to start (three minutes)"</string>
+    <string name="yanbaojiancao1">Beijing graphic version of the new eye exercises:</string>
+    <string name="yanbaojiancaostep1">"Section I: rubbing Cuanzhu point 
+Thumb screw face with both hands on both sides of the acupuncture points respectively, and the remaining fingers naturally relax, fingertip arrived on the forehead. Rhythmic rubbing points;"</string>
+    <string name="yanbaojiancaostep2">"Section: Press Seimei points 
+Fresh fingerprint surface with both hands on both sides of the acupuncture points respectively, and the remaining fingers naturally relax, hold on, like a hollow punches. Up and down rhythmically press the point;"</string>
+    <string name="yanbaojiancaostep3">"Section III: Anrou four white points 
+Fresh face with both hands and fingerprints points respectively on both sides of the thumb against the lower jaw depression, and the remaining fingers naturally relax, hold on, like a hollow punches. Up and down rhythmically rubbing points;"</string>
+    <string name="yanbaojiancaostep4">"Section IV: according to the temple, blow on eyes 
+With both hands thumb screw thread surface respectively according to in on both sides of the temple, the rest of the fingers natural and relaxed, bending. Knead with thumb first according to the temporal, every time a circle, four laps. Then, thumb, index finger with both hands the second joint of the medial, less effort from brow to the brow. Even twice, so alternate;"</string>
+    <string name="yanbaojiancaostep5">"Section V: Anrou Fengchi 
+Forefinger and middle finger with both hands threaded surface on both sides of the acupuncture points respectively, and the remaining three fingers naturally relax rhythmically back and forth rubbing points;"</string>
+    <string name="yanbaojiancaostep6">"Section VI: kneading the earlobe, toe grip 
+Thumb and index finger with both hands to pinch earlobes threaded surface of the eye hole in the middle, and the remaining three fingers bend naturally together. With the thumb and index finger rhythmically kneading points, with both feet do all the toes grip movement;"</string>
 </resources>

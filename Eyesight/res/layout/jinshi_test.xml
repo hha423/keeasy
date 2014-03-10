@@ -12,72 +12,62 @@
 
     <include layout="@layout/toplayout" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    <com.evan.eyesight.EyeTestView
+        android:id="@+id/eyeT"
+        android:layout_width="fill_parent"
+        android:layout_height="240.0dip"
+        android:layout_gravity="center_horizontal" />
 
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8.0dip"
+        android:orientation="vertical" >
 
-            <com.evan.eyesight.EyeTestView
-                android:id="@+id/eyeT"
-                android:layout_width="fill_parent"
-                android:layout_height="240.0dip"
-                android:layout_gravity="center_horizontal" />
+        <ImageButton
+            android:id="@+id/btnTestUp"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:src="@android:drawable/arrow_up_float" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="245.0dip"
-                android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
 
-                <ImageButton
-                    android:id="@+id/btnTestUp"
-                    android:layout_width="60.0dip"
-                    android:layout_height="60.0dip"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/app_name"
-                    android:src="@android:drawable/arrow_up_float" />
+            <ImageButton
+                android:id="@+id/btnTestLeft"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/arrow_left_float" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal" >
+            <ImageButton
+                android:id="@+id/btnTestUnsee"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/btn_unsee" />
 
-                    <ImageButton
-                        android:id="@+id/btnTestLeft"
-                        android:layout_width="60.0dip"
-                        android:layout_height="60.0dip"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/arrow_left_float" />
+            <ImageButton
+                android:id="@+id/btnTestRight"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/arrow_right_float" />
+        </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/btnTestUnsee"
-                        android:layout_width="60.0dip"
-                        android:layout_height="60.0dip"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/btn_unsee" />
-
-                    <ImageButton
-                        android:id="@+id/btnTestRight"
-                        android:layout_width="60.0dip"
-                        android:layout_height="60.0dip"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/arrow_right_float" />
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/btnTestDown"
-                    android:layout_width="60.0dip"
-                    android:layout_height="60.0dip"
-                    android:layout_gravity="center_horizontal"
-                    android:contentDescription="@string/app_name"
-                    android:src="@android:drawable/arrow_down_float" />
-            </LinearLayout>
-        </FrameLayout>
-    </ScrollView>
+        <ImageButton
+            android:id="@+id/btnTestDown"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:src="@android:drawable/arrow_down_float" />
+    </LinearLayout>
 
 </LinearLayout>

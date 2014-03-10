@@ -40,7 +40,7 @@
     <string name="str_ref_value">参考值</string>
     <string name="str_eye_guard">标准视力表</string>
     <string name="str_test_result">您的视力测试结果：</string>
-    <string name="mail">请输入收件人邮箱</string>
+    <string name="mails">请输入收件人邮箱</string>
     <string name="nick">请输入您的名字</string>
     <string name="yes">发送</string>
     <string name="no">不用</string>

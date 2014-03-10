@@ -189,7 +189,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int jilu_text4=0x7f0c0024;
         public static final int layout=0x7f0c0028;
         public static final int ltext=0x7f0c0025;
-        public static final int mail=0x7f0c0018;
+        public static final int mails=0x7f0c0018;
         public static final int msg=0x7f0c0017;
         public static final int nick=0x7f0c0019;
         public static final int progress_jindu=0x7f0c0011;
@@ -258,7 +258,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int lefteye=0x7f09001b;
         public static final int lefttest=0x7f09001d;
         public static final int longd=0x7f09001a;
-        public static final int mail=0x7f090022;
+        public static final int mails=0x7f090022;
         public static final int next=0x7f09000e;
         public static final int nick=0x7f090023;
         public static final int no=0x7f090025;
