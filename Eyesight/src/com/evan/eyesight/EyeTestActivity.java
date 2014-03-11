@@ -210,18 +210,19 @@ public class EyeTestActivity extends BaseActivity {
 			f2 = f - mPreviousX;
 			f3 = f1 - mPreviousY;
 			if (f2 <= 0.0F) {
+				if (Math.abs(f3 / f2) < 1.0F && etv.testIsOver(1))
+					finishMe();
+			} else if (f2 > 0.0F) {
 				if (Math.abs(f3 / f2) < 1.0F && etv.testIsOver(3))
 					finishMe();
 			}
-			if (f2 < 0.0F && Math.abs(f3 / f2) < 1.0F && etv.testIsOver(1))
-				finishMe();
-
-			if (f3 >= 0.0F) {
+			if (f3 <= 0.0F) {
+				if (Math.abs(f2 / f3) < 1.0F && etv.testIsOver(0))
+					finishMe();
+			} else if (f3 > 0.0F) {
 				if (Math.abs(f2 / f3) < 1.0F && etv.testIsOver(2))
 					finishMe();
 			}
-			if (f3 < 0.0F && Math.abs(f2 / f3) < 1.0F && etv.testIsOver(0))
-				finishMe();
 			break;
 		}
 		return flag;
