@@ -52,6 +52,7 @@ public class Tools {
 		public final float[] BT_NOT_SELECTED = new float[] { 1, 0, 0, 0, 0, 0,
 				1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0 };
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public boolean onTouch(View v, MotionEvent event) {
 			if (event.getAction() == MotionEvent.ACTION_DOWN) {

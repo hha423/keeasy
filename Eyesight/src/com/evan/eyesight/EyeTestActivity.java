@@ -22,6 +22,7 @@ public class EyeTestActivity extends BaseActivity {
 			btnTestDown;
 	private boolean flag;
 	private String strEyeTab[];
+	private String strEye[];
 	private float fDimen[];
 
 	@Override
@@ -51,6 +52,7 @@ public class EyeTestActivity extends BaseActivity {
 		super.initData();
 		Resources resources = getResources();
 		strEyeTab = resources.getStringArray(R.array.str_eye_table);
+		strEye = resources.getStringArray(R.array.str_eye);
 	}
 
 	@Override
@@ -63,6 +65,7 @@ public class EyeTestActivity extends BaseActivity {
 		btnTestDown.setOnClickListener(this);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onClick(View v) {
 		// super.onClick(v);
@@ -96,12 +99,14 @@ public class EyeTestActivity extends BaseActivity {
 	public void finishMe() {
 		if (flag) {
 			SetConfig.righteye = getTestResult(etv.getCurPos());
+			SetConfig.right_eye = getEyeResult(etv.getCurPos());
 			etv.shutDown();
 			Skip.mNext(this, EyeResultActivity.class, R.anim.activity_no_anim,
 					R.anim.activity_slide_out_right, true);
 		} else {
 			setResult(etv.getCurPos());
 			SetConfig.lefteye = getTestResult(etv.getCurPos());
+			SetConfig.left_eye = getEyeResult(etv.getCurPos());
 			etv.shutDown();
 			Skip.mBack(this);
 		}
@@ -116,6 +121,17 @@ public class EyeTestActivity extends BaseActivity {
 		return s;
 	}
 
+	public String getEyeResult(int i) {
+		// System.out.println("i:" + i);
+		String s;
+		if (i > 0 && i < fDimen.length)
+			s = strEye[i];
+		else
+			s = strEye[-1 + strEye.length];
+		return s;
+	}
+
+	@SuppressWarnings("deprecation")
 	public boolean onKeyDown(int i, KeyEvent keyevent) {
 		boolean flag = true;
 		if (i == 4)

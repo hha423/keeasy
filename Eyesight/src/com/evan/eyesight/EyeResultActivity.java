@@ -92,9 +92,9 @@ public class EyeResultActivity extends BaseActivity {
 	private void initState() {
 		getResources();
 		text_lefteye_shuzhi.setText((new StringBuilder("左眼：")).append(
-				SetConfig.lefteye).toString());
+				SetConfig.left_eye).toString());
 		text_righteye_shuzhi.setText((new StringBuilder("右眼：")).append(
-				SetConfig.righteye).toString());
+				SetConfig.right_eye).toString());
 		int left = ((int) (1000F * SetConfig.lefteye));
 		int reight = ((int) (1000F * SetConfig.righteye));
 		progress_left1.setProgress(left);

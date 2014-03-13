@@ -1,7 +1,6 @@
 package com.evan.eyesight;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,14 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.evan.eyesight.setting.Skip;
-import com.evan.eyesight.setting.Utils;
 
 public class EyeActivity extends BaseActivity {
 
 	private TextView text_eye;
 	private ImageView iamge_eye;
 	private Button button_gotoceshi;
-	private float fDimen[];
 	private boolean flag;
 
 	@Override

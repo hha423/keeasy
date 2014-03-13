@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -21,7 +22,7 @@ import com.evan.eyesight.setting.Utils;
 public class EyeTestView extends SurfaceView implements
 		android.view.SurfaceHolder.Callback {
 
-	private HashMap arrTest;
+	private HashMap<Integer, ArrayList<DrawObject>> arrTest;
 	private boolean bNeedReDraw;
 	private DrawObject currDrawObj;
 	private int currentPos;
@@ -31,10 +32,11 @@ public class EyeTestView extends SurfaceView implements
 	private SurfaceHolder sfHolder;
 	private int width;
 
+	@SuppressLint("UseSparseArrays")
 	public EyeTestView(Context context) {
 		super(context);
 		fDm = new float[0];
-		arrTest = new HashMap();
+		arrTest = new HashMap<Integer, ArrayList<DrawObject>>();
 		currentPos = 0;
 		bNeedReDraw = true;
 		width = 240;
@@ -43,10 +45,11 @@ public class EyeTestView extends SurfaceView implements
 		sfHolder.addCallback(this);
 	}
 
+	@SuppressLint("UseSparseArrays")
 	public EyeTestView(Context context, AttributeSet attributeset) {
 		super(context, attributeset);
 		fDm = new float[0];
-		arrTest = new HashMap();
+		arrTest = new HashMap<Integer, ArrayList<DrawObject>>();
 		currentPos = 0;
 		bNeedReDraw = true;
 		width = 240;
@@ -55,10 +58,11 @@ public class EyeTestView extends SurfaceView implements
 		sfHolder.addCallback(this);
 	}
 
+	@SuppressLint("UseSparseArrays")
 	public EyeTestView(Context context, AttributeSet attributeset, int i) {
 		super(context, attributeset, i);
 		fDm = new float[0];
-		arrTest = new HashMap();
+		arrTest = new HashMap<Integer, ArrayList<DrawObject>>();
 		currentPos = 0;
 		bNeedReDraw = true;
 		width = 240;
@@ -73,7 +77,6 @@ public class EyeTestView extends SurfaceView implements
 		private SurfaceHolder srufaceHolder;
 
 		public DrawThread(SurfaceHolder surfaceholder) {
-			super("junefsh-drw");
 			bStop = false;
 			srufaceHolder = surfaceholder;
 			mPaint = new Paint();
@@ -97,14 +100,11 @@ public class EyeTestView extends SurfaceView implements
 			do {
 				if (bStop)
 					return;
-				else if (!bNeedReDraw && fDm.length < 1) {
-					return;
-				}
 				canvas = srufaceHolder.lockCanvas(null);
 				oDraw(canvas);
 				if (canvas != null)
 					srufaceHolder.unlockCanvasAndPost(canvas);
-			} while (true);
+			} while (!bNeedReDraw && fDm.length > 1);
 		}
 
 		public void setStop(boolean flag) {
@@ -121,18 +121,23 @@ public class EyeTestView extends SurfaceView implements
 	private void updateFDM() {
 		int i = fDm.length;
 		currentPos = i - 1;
-		ArrayList arraylist = null;
+		ArrayList<DrawObject> arraylist = null;
 		int ai[];
 		float f1;
 		float f2;
 		byte byte0;
 		float f;
-		for (int j = i - 1; j > 0; j--) {
-			arraylist = (ArrayList) arrTest.get(Integer.valueOf(j));
-			if (arraylist == null) {
-				arraylist = new ArrayList();
-				arrTest.put(Integer.valueOf(j), arraylist);
+		int j = i - 1;
+		while (true) {
+			if (j < 0) {
+				refreshEShap();
+				return;
 			}
+			arraylist = (ArrayList<DrawObject>) arrTest.get(Integer.valueOf(j));
+			if (arraylist == null) {
+				arraylist = new ArrayList<DrawObject>();
+			}
+			arrTest.put(Integer.valueOf(j), arraylist);
 			if (j < 5)
 				byte0 = 8;
 			else if (j < 6)
@@ -159,10 +164,9 @@ public class EyeTestView extends SurfaceView implements
 				f2 = 0.0F;
 			for (int k = 0; k < byte0; k++) {
 				arraylist.add(new DrawObject(f1, f2, ai[k], fDm[j], j));
-				// System.out.println("k:" + k + "&" + fDm[j]);
 			}
+			j--;
 		}
-		refreshEShap();
 	}
 
 	public int getCurPos() {
@@ -178,32 +182,8 @@ public class EyeTestView extends SurfaceView implements
 
 	public boolean refreshEShap() {
 		boolean flag;
-		int i;
-		Iterator iterator;
 		flag = true;
-		ArrayList arraylist = (ArrayList) arrTest.get(Integer
-				.valueOf(currentPos));
-		if (arraylist != null) {
-			i = arraylist.size();
-			iterator = arraylist.iterator();
-			while (iterator.hasNext()) {
-				DrawObject drawobject = (DrawObject) iterator.next();
-				if (drawobject.rst != -1)
-					break;
-				currDrawObj = drawobject;
-				if (i == 0) {
-					currentPos = -1 + currentPos;
-					if (currentPos > 0)
-						currDrawObj = (DrawObject) ((ArrayList) arrTest
-								.get(Integer.valueOf(currentPos))).get(0);
-					else
-						flag = false;
-				}
-				i--;
-			}
-		}
-		if (flag)
-			bNeedReDraw = true;
+		
 		return flag;
 	}
 
@@ -254,6 +234,7 @@ public class EyeTestView extends SurfaceView implements
 		boolean flag;
 		flag = true;
 		if (i != 4) {
+
 			if (currDrawObj.nDir == i) {
 				flag = false;
 			} else {

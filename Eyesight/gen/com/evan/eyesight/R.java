@@ -14,6 +14,7 @@ public final class R {
         public static final int activity_slide_out_right=0x7f040002;
     }
     public static final class array {
+        public static final int str_eye=0x7f060001;
         public static final int str_eye_table=0x7f060000;
     }
     public static final class attr {

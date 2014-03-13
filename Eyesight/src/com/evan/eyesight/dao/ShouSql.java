@@ -53,8 +53,9 @@ public class ShouSql extends SQLiteOpenHelper {
 				null, null);
 	}
 
-	private static final String CREATE_TBL = " create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, left text,right text,str1 text,str2 text) ";
-	private static final String DB_NAME = "eyeData.db";
-	private static final String TBL_NAME = "ResulTbl";
+	// private static final String CREATE_TBL =
+	// " create table  ResulTbl(_id integer primary key autoincrement,leixing text,time text, left text,right text,str1 text,str2 text) ";
+	// private static final String DB_NAME = "eyeData.db";
+	// private static final String TBL_NAME = "ResulTbl";
 	private SQLiteDatabase db;
 }

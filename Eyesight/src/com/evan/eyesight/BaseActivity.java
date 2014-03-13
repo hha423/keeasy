@@ -39,8 +39,8 @@ public class BaseActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		activityList.add(this);
 		// 异常处理，不需要处理时注释掉这两句即可！
-		CrashHandler crashHandler = CrashHandler.getInstance();
-		crashHandler.init(getApplicationContext());// 注册crashHandler
+//		CrashHandler crashHandler = CrashHandler.getInstance();
+//		crashHandler.init(getApplicationContext());// 注册crashHandler
 		// crashHandler.sendPreviousReportsToServer();
 		initView();
 		initData();
